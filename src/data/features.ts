@@ -71,7 +71,7 @@ export const featureLists: Record<string, FeatureList> = {
                 icon: Shield,
                 title: 'Ley Marco de Ciberseguridad Chilena',
                 description: 'Brindamos apoyo especializado para ayudar a las organizaciones a cumplir con los requisitos de la Ley Marco de Ciberseguridad de Chile, incluyendo evaluaciones de cumplimiento, desarrollo de políticas y gestión de incidentes.',
-                image: '../src/assets/images/servicios/servicio-2.webp',
+                image: '/images/servicios/servicio-2.webp',
                 slug: 'ley-marco-ciberseguridad',
                 descriptionPage: 'Brindamos apoyo especializado para ayudar a las organizaciones a cumplir con los requisitos de la Ley Marco de Ciberseguridad de Chile, incluyendo evaluaciones de cumplimiento, desarrollo de políticas y gestión de incidentes.',
                 featuresPage: [
@@ -105,7 +105,7 @@ export const featureLists: Record<string, FeatureList> = {
                 icon: TabletSmartphone,
                 title: 'Desarrollo de Apps IA Generativa',
                 description: 'Creamos soluciones tecnológicas avanzadas basadas en técnicas del tipo RAG con IA generativa, optimizando la toma de decisiones mediante la integración de grandes bases de datos con modelos de lenguaje natural al servicio del usuario final.',
-                image: '../src/assets/images/servicios/servicio-3.webp',
+                image: '/images/servicios/servicio-3.webp',
                 slug: 'ia',
                 descriptionPage: 'Creamos soluciones tecnológicas avanzadas basadas en técnicas del tipo RAG con IA generativa, optimizando la toma de decisiones mediante la integración de grandes bases de datos con modelos de lenguaje natural al servicio del usuario final.',
                 featuresPage: [
@@ -145,7 +145,7 @@ export const featureLists: Record<string, FeatureList> = {
                 icon: Smile,
                 title: 'Integración de Aplicaciones con Sistemas ERP',
                 description: 'Diseñamos e implementamos soluciones que conectan aplicaciones personalizadas con sistemas ERP como SAP, Oracle, o Microsoft Dynamics, permitiendo una gestión empresarial más eficiente y automatizada.',
-                image: '../src/assets/images/servicios/servicio-4.webp',
+                image: '/images/servicios/servicio-4.webp',
                 slug: 'integraciones',
                 descriptionPage: 'Diseñamos e implementamos soluciones que conectan aplicaciones personalizadas con sistemas ERP como SAP, Oracle, o Microsoft Dynamics, permitiendo una gestión empresarial más eficiente y automatizada.',
                 featuresPage: [
