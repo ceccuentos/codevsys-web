@@ -1,0 +1,49 @@
+---
+interface Props {
+    date: string | number | Date;
+}
+
+const { date } = Astro.props;
+
+// Ensure we're working with a Date object
+const dateObj = new (Date as DateConstructor)(date instanceof Date ? date.getTime() : date);
+
+// Validate the date
+if (isNaN(dateObj.getTime())) {
+    throw new Error('Invalid date provided to Date component');
+}
+
+const rawDate = dateObj.toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+// Capitalizar el mes y agregar coma antes del año
+const formattedDate = rawDate.replace(/de ([a-záéíóúñ]+) de/, (match, month) => {
+  const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+  return `de ${capitalizedMonth},`;
+});
+
+
+// const formattedDate = dateObj.toLocaleDateString('es-ES', {
+//   year: 'numeric',
+//   month: 'short',
+//   day: '2-digit'
+// });
+
+
+// const formattedDate = dateObj.toLocaleDateString('en-US', {
+//     year: 'numeric',
+//     month: 'long',
+//     day: 'numeric'
+// }).replace(/(\d+)(?=(,))/, (match: string) => {
+//     const day = parseInt(match);
+//     const suffix = ['th', 'st', 'nd', 'rd'][(day % 10 > 3 || day > 20) ? 0 : day % 10];
+//     return day + suffix;
+// });
+---
+
+<time datetime={dateObj.toISOString()} class="text-sm text-body-base">
+    {formattedDate}
+</time>

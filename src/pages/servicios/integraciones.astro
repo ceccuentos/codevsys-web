@@ -1,0 +1,92 @@
+---
+import Layout from "@layouts/Layout.astro"
+import InnerHero from "@components/sections/InnerHero.astro"
+import FeatureDetails from "@components/sections/FeatureDetails.astro";
+import { getFeatureBySlug } from "@data/features";
+import Stats from '@components/sections/Stats.astro';
+import { statsLists } from '@data/stats';
+import Eyebrow from '@components/ui/Eyebrow.astro';
+
+const heroContent = {
+    title: "Servicios - Integraciones", //"Contact Us",
+    description: ""
+}
+
+const feature = getFeatureBySlug('integraciones');
+
+const beneficios = [
+  "Conectas tus sistemas clave en una arquitectura unificada, eliminando silos y mejorando la coordinación entre todas las áreas del negocio.",
+  "Tomas decisiones más rápidas y acertadas al contar con datos consolidados de finanzas, clientes, operaciones y logística en tiempo real.",
+  "Aumentas la productividad automatizando tareas manuales, eliminando reprocesos y reduciendo errores por falta de integración.",
+  "Escalas tu operación digital con desarrollos web a medida que se adaptan a tus procesos y herramientas actuales.",
+  "Proteges tu información ante fallos o ciberataques mediante respaldos automatizados, cifrados y validados regularmente sin intervención manual."
+];
+
+const sideBySideStats = {
+    eyebrow: "IMPACTO",
+    title: "Resultados tangibles para tu organización",
+    description: "En promedio, las organizaciones que implementan este servicio experimentan mejoras significativas en sus proyectos y operaciones clave.",
+    variant: 'side-by-side' as const,
+    stats: statsLists.integraciones.stats,
+    content: {
+        title: "Resultados tangibles para tu organización",
+        description: "En promedio, las organizaciones que implementan este servicio experimentan mejoras significativas en sus proyectos y operaciones clave.",
+
+    }
+};
+
+---
+
+<Layout title="Contáctanos" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.">
+    <InnerHero content={heroContent} />
+    {feature && <FeatureDetails feature={feature} />}
+
+    <div
+    class="bg-background-light text-headline-light py-12"
+>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-2">
+          <div class="mb-6 flex items-center gap-2">
+  <Eyebrow text="Beneficios" background="base" />
+
+</div>
+          <div class="space-y-8">
+  {beneficios.map((beneficio) => (
+    <div class="text-2xl md:text-3xl font-normal leading-tight">{beneficio}</div>
+  ))}
+</div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 32 32" fill="none">
+  <path d="M27,4H5C3.3,4,2,5.3,2,7v18c0,1.7,1.3,3,3,3h22c1.7,0,3-1.3,3-3V7C30,5.3,28.7,4,27,4z M9.1,7.6c0.1-0.1,0.1-0.2,0.2-0.3
+	c0.1-0.1,0.2-0.2,0.3-0.2C10,6.9,10.4,7,10.7,7.3c0.1,0.1,0.2,0.2,0.2,0.3C11,7.7,11,7.9,11,8c0,0.3-0.1,0.5-0.3,0.7
+	C10.5,8.9,10.3,9,10,9C9.7,9,9.5,8.9,9.3,8.7C9.1,8.5,9,8.3,9,8C9,7.9,9,7.7,9.1,7.6z M6,8c0-0.3,0.1-0.5,0.3-0.7
+	c0,0,0.1-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1C6.7,7,6.7,7,6.8,7c0.1,0,0.3,0,0.4,0c0.1,0,0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1
+	c0,0,0.1,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.2,0.3C8,7.7,8,7.9,8,8c0,0.1,0,0.3-0.1,0.4C7.9,8.5,7.8,8.6,7.7,8.7C7.5,8.9,7.3,9,7,9
+	S6.5,8.9,6.3,8.7C6.1,8.5,6,8.3,6,8z M11.7,21.3c0.4,0.4,0.4,1,0,1.4C11.5,22.9,11.3,23,11,23s-0.5-0.1-0.7-0.3l-3-3
+	c-0.4-0.4-0.4-1,0-1.4l3-3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4L9.4,19L11.7,21.3z M12.6,8.9c-0.1-0.1-0.2-0.1-0.3-0.2
+	c-0.1-0.1-0.2-0.2-0.2-0.3C12,8.3,12,8.1,12,8c0-0.1,0-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.3c0.4-0.4,1-0.4,1.4,0
+	c0.1,0.1,0.2,0.2,0.2,0.3C14,7.7,14,7.9,14,8c0,0.1,0,0.3-0.1,0.4c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9
+	C12.9,9,12.7,9,12.6,8.9z M18.9,15.4l-4,8C14.7,23.8,14.4,24,14,24c-0.2,0-0.3,0-0.4-0.1c-0.5-0.2-0.7-0.8-0.4-1.3l4-8
+	c0.2-0.5,0.8-0.7,1.3-0.4C18.9,14.4,19.1,15,18.9,15.4z M24.7,19.7l-3,3C21.5,22.9,21.3,23,21,23s-0.5-0.1-0.7-0.3
+	c-0.4-0.4-0.4-1,0-1.4l2.3-2.3l-2.3-2.3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3C25.1,18.7,25.1,19.3,24.7,19.7z" stroke="#0f3c5c" stroke-width="1.5" fill="none"/>
+</svg>
+        </div>
+      </div>
+    </div>
+  </div>
+          <!-- <svg width="160px" height="160px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.00169L16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8.00169M16 8.00169C15.7563 8 15.4907 8 15.2 8H8.8C8.50929 8 8.24373 8 8 8.00169M16 8.00169C17.1649 8.00979 17.8313 8.05658 18.362 8.32698C18.9265 8.6146 19.3854 9.07354 19.673 9.63803C20 10.2798 20 11.1198 20 12.8V16.2C20 17.8802 20 18.7202 19.673 19.362C19.3854 19.9265 18.9265 20.3854 18.362 20.673C17.7202 21 16.8802 21 15.2 21H8.8C7.11984 21 6.27976 21 5.63803 20.673C5.07354 20.3854 4.6146 19.9265 4.32698 19.362C4 18.7202 4 17.8802 4 16.2V12.8C4 11.1198 4 10.2798 4.32698 9.63803C4.6146 9.07354 5.07354 8.6146 5.63803 8.32698C6.16873 8.05658 6.83507 8.00979 8 8.00169M10 11V18M14 11V18M8.5 12.5H15.5M8.5 16.5H15.5"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> -->
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <Stats content={sideBySideStats} background='base' padding="base"/>
+</Layout>

@@ -1,0 +1,112 @@
+---
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+import TeamGrid from '@components/sections/TeamGrid.astro';
+
+const seoTitle = "Nosotros";
+const seoDescription = "Somos una Startup joven nacida a partir del convencimiento de que las personas pueden aportar al desarrollo de una sociedad a través de iniciativas tecnológicas que apuntan alto y que ven en el crecimiento mutuo una oportunidad de aportar al mundo en que vivimos. Somos un equipo de entusiastas del software que se ha ganado un nombre por su afán por innovar y adaptarse.";
+
+const heroContent = {
+    title: "Nosotros",
+    description: "Somos una Startup joven nacida a partir del convencimiento de que las personas pueden aportar al desarrollo de una sociedad a través de iniciativas tecnológicas que apuntan alto y que ven en el crecimiento mutuo una oportunidad de aportar al mundo en que vivimos.",
+}
+
+const manifiesto = [{
+    name: "Manifiesto",
+    description: "Codevsys nació a mediados del 2020 como un sueño: usar la tecnología para hacerle la vida más fácil a las personas.\nDesde entonces, no hemos parado de construir soluciones que resuelven problemas reales, de manera simple, útil y eficiente.\n\nCreemos que la tecnología tiene sentido cuando está al servicio de las personas. Que el código solo importa cuando conecta, mejora, simplifica.\n\nNos mueve la colaboración, la comunicación transparente y una ética clara en cada decisión. Por eso trabajamos codo a codo con nuestros clientes, entendiendo sus desafíos como propios y diseñando soluciones que no solo funcionan: que transforman.\n\nSomos un equipo técnico, sí. Pero también humano. Nos gusta escuchar, iterar, resolver.\n\nCreamos software. Integramos sistemas. Automatizamos tareas. Damos vida a ideas.\n\nY lo hacemos con un solo norte: que cada solución sea una herramienta que potencie el negocio, pero sobre todo, que le facilite la vida a quienes la usan.\n\nPorque al final del día, esa es nuestra verdadera meta: tecnología con propósito, soluciones con impacto."
+}];
+
+const misionContent = [{
+    name: "Misión",
+    description: "Lograr la satisfacción total del cliente proporcionando el mejor servicio y recursos técnicos para entregar valor y beneficios a las mejores soluciones de software que potencian sistemas y conducen al éxito.",
+}]
+
+const visionContent = [{
+    name: "Visión",
+    description: "Convertirnos en uno de los mejores partners de desarrollo de negocios en Latinoamérica, a través de la tecnología y el deseo de entregar calidad de vida a las personas y aportar a la sociedad.",
+}]
+
+const valoresContent = [
+  {
+    name: "1",
+    description: "Ofrecer soluciones innovadoras entregadas de manera eficiente y a tiempo.",
+  },
+  {
+    name: "2",
+    description: "Entregar máxima eficiencia y aumentar la productividad con la menor cantidad de recursos posible.",
+  },
+  {
+    name: "3",
+    description: "Trabajo en equipo y colaboración centrada en las necesidades del cliente.",
+  },
+  {
+    name: "4",
+    description: "Crecimiento e innovación, actuando con transparencia, honestidad y compromiso.",
+  }
+]
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+    <InnerHero content={heroContent}  />
+
+    <section class="py-small">
+      <div class="site-container px-8">
+        <div class="space-y-12">
+
+          <div>
+            <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Manifiesto</h2>
+            <ul class="space-y-3">
+              {manifiesto.map((manifiesto) => (
+                <li>
+                  <span class="text-base text-gray-800" set:html={manifiesto.description.replace(/\n/g, '<br>')}></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Misión</h2>
+            <ul class="space-y-3">
+              {misionContent.map((misionContent) => (
+                <li>
+                  <span class="text-base text-gray-800">{misionContent.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Visión</h2>
+            <ul class="space-y-3">
+              {visionContent.map((visionContent) => (
+                <li>
+                  <span class="text-base text-gray-800">{visionContent.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Valores</h2>
+            <ul class="space-y-3">
+              {valoresContent.map((valoresContent) => (
+                <li>
+                  <span class="font-bold text-base text-[#3557c1] mr-2">{valoresContent.name}.</span>
+                  <span class="text-base text-gray-800">{valoresContent.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10">
+      <div class="site-container px-4 md:px-8 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-[#3557c1] mb-2 text-center tracking-tight">Nuestro Equipo</h2>
+        <p class="text-lg text-gray-600 text-center mb-10">Conoce a las personas que hacen posible nuestra misión</p>
+        <TeamGrid padding="base" />
+      </div>
+    </section>
+</Layout>

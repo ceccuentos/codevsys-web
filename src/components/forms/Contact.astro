@@ -1,0 +1,163 @@
+---
+import Button from "@components/ui/Button.astro";
+import Input from "@components/ui/form/Input.astro";
+import Textarea from "@components/ui/form/Textarea.astro";
+import Radio from "@components/ui/form/Radio.astro";
+import Checkbox from "@components/ui/form/Checkbox.astro";
+import Select from "@components/ui/form/Select.astro";
+
+const hearAboutOptions = [
+    { label: "Búscador Web", value: "Buscador" },
+    { label: "Social Media", value: "Social" },
+    { label: "Amigos/Colegas", value: "Amigos" },
+    { label: "Otros", value: "Otros" }
+];
+
+const interestOptions = [
+    { label: "Ciberseguridad", value: "Ciberseguridad" },
+    { label: "Desarrollo Web", value: "Desarrollo Web" },
+    { label: "Integración de Aplicaciones", value: "Integración de Aplicaciones" },
+    { label: "Consultoría", value: "Consultoría" }
+];
+
+const serviceOptions = [
+    { label: "Implementación NERC-CIP Chilena", value: "Nerc Cip" },
+    { label: "Implementación de asistentes con IA Generativa", value: "IA Generativa" },
+    { label: "Ley de Ciberseguridad 21.663", value: "Ley de Ciberseguridad" },
+    { label: "Integración de aplicaciones con sistemas ERP", value: "Integración" },
+    { label: "Desarrollo Web", value: "Desarrollo Web" }
+];
+
+const formBackground = 'light';
+---
+<form id="contact-form" enctype="multipart/form-data" class="space-y-6 bg-white p-6 rounded-lg">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <Input
+        label="Nombre"
+        id="name"
+        name="name"
+        required
+        background={formBackground}
+        />
+        <Input
+        label="Email"
+        type="email"
+        id="email"
+        name="email"
+        required
+        background={formBackground}
+        />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+    <Input
+        label="Teléfono"
+        type="tel"
+        id="phone"
+        name="phone"
+        background={formBackground}
+    />
+    <Input
+        label="Compañía"
+        id="company"
+        name="company"
+        background={formBackground}
+    />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <Radio
+            label="¿Cómo se enteró de nosotros?"
+            id="hear-about"
+            name="hear-about"
+            options={hearAboutOptions}
+            required
+            background={formBackground}
+        />
+    <Checkbox
+        label="Áreas de Interés"
+        id="interests"
+        name="interests"
+        options={interestOptions}
+        background={formBackground}
+    />
+    </div>
+
+    <Textarea class="text-sm"
+        label="Mensaje"
+        id="message"
+        name="message"
+        required
+        background={formBackground}
+    />
+
+    <Checkbox
+        label="Estoy de acuerdo con los términos y condiciones"
+        id="terms"
+        name="terms"
+        required
+        background={formBackground}
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-sm">
+        <Select
+            label="¿Qué servicios le interesan?"
+            id="service"
+            name="service"
+            options={serviceOptions}
+            required
+            placeholder="Escoge un Servicio"
+            background={formBackground}
+        />
+
+    </div>
+
+
+
+    <div class="mt-4 flex justify-center">
+      <div class="g-recaptcha" data-sitekey={import.meta.env.RECAPTCHA_SITE_KEY}></div>
+    </div>
+    <div class="mt-6">
+        <Button type="submit">Enviar</Button>
+    </div>
+    <div id="form-message" class="mt-4 text-center text-base"></div>
+</form>
+
+<!-- Modal de éxito -->
+<div id="success-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:50; align-items:center; justify-content:center;">
+  <div style="background:white; padding:2rem 1.5rem; border-radius:0.75rem; max-width:90vw; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <h2 class="text-xl font-bold mb-4">¡Mensaje enviado correctamente!</h2>
+    <p class="mb-6">Gracias por contactarnos. Pronto te responderemos.</p>
+    <button id="close-modal-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
+  </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  const form = document.getElementById('contact-form');
+  const modal = document.getElementById('success-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const messageDiv = document.getElementById('form-message');
+
+  if (form instanceof HTMLFormElement && modal && closeModalBtn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      messageDiv && (messageDiv.textContent = '');
+      const formData = new FormData(form);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        modal.style.display = 'flex';
+      } else {
+        messageDiv && (messageDiv.textContent = 'Ocurrió un error al enviar el mensaje. Intenta nuevamente o contáctanos por otro medio.');
+        messageDiv && (messageDiv.className = 'mt-4 text-center text-base text-red-600');
+      }
+    });
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      form.reset();
+      messageDiv && (messageDiv.textContent = '');
+    });
+  }
+</script>
