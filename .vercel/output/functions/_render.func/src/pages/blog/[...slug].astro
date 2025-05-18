@@ -9,11 +9,27 @@ export async function getStaticPaths() {
     const posts = await getCollection('blog');
     return posts.map((post) => ({
         params: { slug: post.id },
+        //params: { slug: [post.id] },
         props: { post },
     }));
 }
 
-const { post } = Astro.props;
+
+
+let slugParam = Astro.params.slug;
+if (Array.isArray(slugParam)) {
+  slugParam = slugParam.join('/');
+}
+
+// Encuentra el post correspondiente
+const posts = await getCollection('blog');
+const post = posts.find((p) => p.id === slugParam);
+
+//const { post } = Astro.props;
+
+if (!post) {
+   throw new Error('Post no encontrado'); // Puedes personalizar este mensaje o mostrar un componente 404
+ }
 const { Content } = await render(post);
 
 // Use SEO data from frontmatter if available, fallback to regular post data

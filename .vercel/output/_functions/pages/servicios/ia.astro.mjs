@@ -2,8 +2,8 @@ import { c as createComponent, r as renderComponent, b as renderTemplate, m as m
 import 'kleur/colors';
 import { a as $$Layout } from '../../chunks/Layout_r8YmDUun.mjs';
 import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
-import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_gHeGc8J5.mjs';
-import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_B43Ctfsx.mjs';
+import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_CVlsdaIA.mjs';
+import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_Cc5qLdqg.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Ia = createComponent(($$result, $$props, $$slots) => {

@@ -2,10 +2,10 @@ import { a as createAstro, c as createComponent, m as maybeRenderHead, r as rend
 import 'kleur/colors';
 import { b as $$Button, d as createSvgComponent, a as $$Layout } from '../chunks/Layout_r8YmDUun.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
-import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_B43Ctfsx.mjs';
+import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_Cc5qLdqg.mjs';
 import { g as getPaddingClass, a as getBackgroundColor, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
 /* empty css                                 */
-import { g as getCollection } from '../chunks/_astro_content_BduOr-eq.mjs';
+import { g as getCollection } from '../chunks/_astro_content_DG9eIubY.mjs';
 import { $ as $$BlogPost } from '../chunks/BlogPost_vS9ZV2io.mjs';
 export { renderers } from '../renderers.mjs';
 

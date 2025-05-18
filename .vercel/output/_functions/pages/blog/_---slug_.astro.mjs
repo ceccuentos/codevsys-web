@@ -1,6 +1,6 @@
 import { a as createAstro, c as createComponent, m as maybeRenderHead, b as renderTemplate, r as renderComponent, F as Fragment } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { r as renderEntry, g as getCollection } from '../../chunks/_astro_content_BduOr-eq.mjs';
+import { g as getCollection, r as renderEntry } from '../../chunks/_astro_content_DG9eIubY.mjs';
 import { a as $$Layout } from '../../chunks/Layout_r8YmDUun.mjs';
 import 'clsx';
 import { $ as $$Date } from '../../chunks/Date_Ca2DQN8_.mjs';
@@ -20,13 +20,22 @@ async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: { slug: post.id },
+    //params: { slug: [post.id] },
     props: { post }
   }));
 }
 const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$;
-  const { post } = Astro2.props;
+  let slugParam = Astro2.params.slug;
+  if (Array.isArray(slugParam)) {
+    slugParam = slugParam.join("/");
+  }
+  const posts = await getCollection("blog");
+  const post = posts.find((p) => p.id === slugParam);
+  if (!post) {
+    throw new Error("Post no encontrado");
+  }
   const { Content } = await renderEntry(post);
   const seoTitle = post.data.seo?.title || post.data.title;
   const seoDescription = post.data.seo?.description || post.data.excerpt;
