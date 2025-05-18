@@ -5,7 +5,7 @@ import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
 import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_BGW8U6ZE.mjs';
 import { g as getPaddingClass, a as getBackgroundColor, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
 /* empty css                                 */
-import { g as getCollection } from '../chunks/_astro_content_CQjvQGPH.mjs';
+import { g as getCollection } from '../chunks/_astro_content_BA2AxaBL.mjs';
 import { $ as $$BlogPost } from '../chunks/BlogPost_vS9ZV2io.mjs';
 export { renderers } from '../renderers.mjs';
 
