@@ -2,7 +2,7 @@
 title: "Gestión de riesgos: protege tus activos digitales en 3 simples pasos"
 excerpt: "Chile moderniza su legislación digital con tres leyes clave que obligan a las empresas a reforzar sus prácticas de ciberseguridad y protección de datos personales."
 featuredImage: "./images/paisaje-digital.jpg"
-publishDate: "2025-05-19"
+publishDate: "2025-05-05"
 publish: true
 categories: ["Ciberseguridad"]
 
@@ -23,7 +23,7 @@ Esta normativa tipifica delitos modernos como el acceso indebido a sistemas, la 
 
 ### Ley 21.663: Ciberseguridad como Política de Estado y Deber Empresarial
 
-Esta ley crea la Agencia Nacional de Ciberseguridad ([ANCI](https://www.interior.gob.cl)) y establece estándares de prevención, reporte y contención de incidentes para entidades que prestan servicios esenciales o son consideradas operadores de importancia vital. Abarca sectores como energía, telecomunicaciones, salud, servicios financieros, entre otros.
+Esta ley crea la Agencia Nacional de Ciberseguridad ([ANCI](https://anci.gob.cl/)) y establece estándares de prevención, reporte y contención de incidentes para entidades que prestan servicios esenciales o son consideradas operadores de importancia vital. Abarca sectores como energía, telecomunicaciones, salud, servicios financieros, entre otros.
 
 **Importante:** Actualmente se está trabajando en la definición reglamentaria de quiénes serán considerados operadores de importancia vital. Este proceso es clave para que las organizaciones comprendan si estarán sujetas a las obligaciones más estrictas del marco normativo.
 
@@ -35,7 +35,7 @@ Las empresas obligadas deberán implementar sistemas de gestión de seguridad de
 
 Aunque su entrada en vigencia plena será en diciembre de 2026, esta ley ya plantea desafíos inmediatos. Obliga a las empresas a justificar cada tratamiento de datos, implementar principios de privacidad por diseño y por defecto, notificar brechas, y asegurar mecanismos efectivos para que los titulares ejerzan sus derechos (acceso, rectificación, supresión, etc.).
 
-Introduce además conceptos técnicos como [anonimización](https://www.codevsys.cl/blog/anonimizacion-datos-chile) (dato no rastreable) y [seudonimización](https://www.codevsys.cl/blog/seudonimizacion-datos) (dato indirecto), los cuales tendrán exigencias técnicas específicas, a ser detalladas en reglamentos posteriores.
+Introduce además conceptos técnicos como [anonimización](https://www.pjud.cl/docs/download/57691) (dato no rastreable) y [seudonimización](https://cloud.google.com/sensitive-data-protection/docs/pseudonymization?hl=es-419) (dato indirecto), los cuales tendrán exigencias técnicas específicas, a ser detalladas en reglamentos posteriores.
 
 **Implicancias para el sector público:** Todos los documentos públicos que contengan datos personales, particularmente aquellos utilizados con fines estadísticos, históricos o científicos, deberán ser anonimizados antes de su publicación. La ley establece que los órganos públicos que reciban datos para tratamiento específico sólo podrán conservarlos mientras sea necesario para ese fin. Posteriormente, deberán eliminarlos o anonimizar su contenido, salvo que existan razones legales fundadas para conservarlos.
 

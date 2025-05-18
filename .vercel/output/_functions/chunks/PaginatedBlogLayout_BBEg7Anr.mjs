@@ -1,8 +1,8 @@
 import { c as createComponent, a as createAstro, r as renderComponent, m as maybeRenderHead, b as renderTemplate, d as addAttribute } from './astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { $ as $$, a as $$Layout, b as $$Button } from './Layout_r8YmDUun.mjs';
+import { $ as $$, a as $$Layout, b as $$Button } from './Layout_DAN-WyZE.mjs';
 import { c as categories, $ as $$BlogPost } from './BlogPost_vS9ZV2io.mjs';
-import { g as getCollection } from './_astro_content_DG9eIubY.mjs';
+import { g as getCollection } from './_astro_content_CQjvQGPH.mjs';
 import { $ as $$InnerHero } from './InnerHero_7903qgB1.mjs';
 
 const $$Astro$3 = createAstro("http://localhost:4321");

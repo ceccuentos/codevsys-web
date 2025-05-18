@@ -1,11 +1,11 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { r as renderEntry, g as getCollection } from '../../chunks/_astro_content_DG9eIubY.mjs';
-import { $ as $$$1, a as $$Layout } from '../../chunks/Layout_r8YmDUun.mjs';
+import { r as renderEntry, g as getCollection } from '../../chunks/_astro_content_CQjvQGPH.mjs';
+import { $ as $$$1, a as $$Layout } from '../../chunks/Layout_DAN-WyZE.mjs';
 import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
 import 'clsx';
 import { $ as $$Image } from '../../chunks/_astro_assets_Cbj1YpFU.mjs';
-import { $ as $$Mail } from '../../chunks/Mail_Ba_SDUMJ.mjs';
+import { $ as $$Mail } from '../../chunks/Mail_Bo20pgEw.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$5 = createAstro("http://localhost:4321");

@@ -1,8 +1,8 @@
 import { a as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, r as renderComponent, b as renderTemplate, u as unescapeHTML } from '../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../chunks/Layout_r8YmDUun.mjs';
+import { a as $$Layout } from '../chunks/Layout_DAN-WyZE.mjs';
 import { $ as $$InnerHero } from '../chunks/InnerHero_7903qgB1.mjs';
-import { g as getCollection } from '../chunks/_astro_content_DG9eIubY.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CQjvQGPH.mjs';
 import { g as getPaddingClass } from '../chunks/styleUtils_tC4Hqp-N.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
 export { renderers } from '../renderers.mjs';

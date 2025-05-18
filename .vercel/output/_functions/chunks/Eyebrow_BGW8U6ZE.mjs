@@ -1,6 +1,6 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute, s as spreadAttributes } from './astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { $ as $$ } from './Layout_r8YmDUun.mjs';
+import { $ as $$ } from './Layout_DAN-WyZE.mjs';
 import { c as getEyebrowColor } from './styleUtils_tC4Hqp-N.mjs';
 import 'clsx';
 

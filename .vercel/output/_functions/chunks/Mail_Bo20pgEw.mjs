@@ -1,6 +1,6 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from './astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { $ as $$ } from './Layout_r8YmDUun.mjs';
+import { $ as $$ } from './Layout_DAN-WyZE.mjs';
 
 const $$Astro = createAstro("http://localhost:4321");
 const $$Mail = createComponent(($$result, $$props, $$slots) => {

@@ -1,9 +1,9 @@
 import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate } from '../../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../../chunks/_astro_content_DG9eIubY.mjs';
-import { $ as $$PaginatedBlogLayout } from '../../../chunks/PaginatedBlogLayout_COErHNFm.mjs';
+import { g as getCollection } from '../../../chunks/_astro_content_CQjvQGPH.mjs';
+import { $ as $$PaginatedBlogLayout } from '../../../chunks/PaginatedBlogLayout_BBEg7Anr.mjs';
 import { c as categories } from '../../../chunks/BlogPost_vS9ZV2io.mjs';
-import { c as blogSetting } from '../../../chunks/Layout_r8YmDUun.mjs';
+import { c as blogSetting } from '../../../chunks/Layout_DAN-WyZE.mjs';
 export { renderers } from '../../../renderers.mjs';
 
 const $$Astro = createAstro("http://localhost:4321");

@@ -1,10 +1,10 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute, F as Fragment, e as renderScript } from '../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { $ as $$, b as $$Button, s as siteConfig, a as $$Layout } from '../chunks/Layout_r8YmDUun.mjs';
+import { $ as $$, b as $$Button, s as siteConfig, a as $$Layout } from '../chunks/Layout_DAN-WyZE.mjs';
 import { $ as $$InnerHero } from '../chunks/InnerHero_7903qgB1.mjs';
 import 'clsx';
 import { d as getHeadlineColor, e as getInputBackgroundColor, f as getInputTextColor, a as getBackgroundColor, g as getPaddingClass, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
-import { $ as $$Mail } from '../chunks/Mail_Ba_SDUMJ.mjs';
+import { $ as $$Mail } from '../chunks/Mail_Bo20pgEw.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$7 = createAstro("http://localhost:4321");
