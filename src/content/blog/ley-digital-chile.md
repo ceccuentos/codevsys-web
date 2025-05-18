@@ -1,5 +1,5 @@
 ---
-title: "Gestión de riesgos: protege tus activos digitales en 3 simples pasos"
+title: "El Desafío para las Empresas en Ciberseguridad y Protección de Datos"
 excerpt: "Chile moderniza su legislación digital con tres leyes clave que obligan a las empresas a reforzar sus prácticas de ciberseguridad y protección de datos personales."
 featuredImage: "./images/paisaje-digital.jpg"
 publishDate: "2025-05-05"
