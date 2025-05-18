@@ -10,8 +10,6 @@ const currentPage = parseInt(Astro.url.searchParams.get('page') || '1');
 // Get all posts without any filtering
 const allPosts = await getCollection('blog');
 
-console.log('Slugs detectados por Astro:', allPosts.map(post => post.id));
-
 // Then apply filters if needed
 const filteredPosts = allPosts.filter((post) => {
     return import.meta.env.DEV || post.data.publish !== false;
