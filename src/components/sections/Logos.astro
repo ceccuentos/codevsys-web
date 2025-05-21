@@ -44,14 +44,14 @@ const paddingClass = getPaddingClass({
         <div class="flex flex-wrap justify-center gap-16">
             {logos.map((logo, index) => (
                 <div
-                    class="logo-wrapper flex justify-center items-center w-32 h-20"
+                    class="logo-wrapper flex justify-center items-center w-32 h-20 md:w-48 md:h-32"
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                 >
                     <Image
                         src={logo.src}
                         alt={logo.alt}
-                        class="h-8 md:h-10 w-auto transition-all duration-300 object-contain object-center filter grayscale hover:grayscale-0 opacity-75 hover:opacity-100"
+                        class="h-8 md:h-16 w-auto transition-all duration-300 object-contain object-center filter grayscale hover:grayscale-0 opacity-75 hover:opacity-100"
                         width={200}
                         height={80}
                         // width={500}

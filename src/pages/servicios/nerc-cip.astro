@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro"
 import InnerHero from "@components/sections/InnerHero.astro"
 import FeatureDetails from "@components/sections/FeatureDetails.astro";
+import Subscription from "@components/sections/Subscription.astro";
 import { getFeatureBySlug } from "@data/features";
 import Stats from '@components/sections/Stats.astro';
 import { statsLists } from '@data/stats';
@@ -41,6 +42,21 @@ const sideBySideStats = {
     }
 };
 
+const styleGuideSection = {
+    eyebrow: "Síguenos",
+    headline: "Baja el Brochure",
+    description: "Continúa teniendo en cuenta nuestras publicaciones y noticias más recientes.",
+    newsLetterForm : [
+        {
+            title: "!Descarga el Brochure NERC-CIP!",
+            description: "Enterate de cuales son los puntos más críticos en la implementación de NERC-CIP en tu organización.",
+            successTitle: "¡Descarga exitosa!",
+            successMessage: "Gracias por descargar el brochure.",
+            buttonText: "Descargar",
+            fileDownload: "ciberseguridad.pdf",
+        }
+    ],
+}
 ---
 
 <Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp">
@@ -77,4 +93,5 @@ const sideBySideStats = {
     </div>
 
     <Stats content={sideBySideStats} background='base' padding="base"/>
+    <Subscription content={styleGuideSection} imagePosition="right" background="light" padding="base"  />
 </Layout>

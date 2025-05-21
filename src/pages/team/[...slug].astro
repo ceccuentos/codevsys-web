@@ -8,25 +8,47 @@ import DesktopProfile from '@components/team/DesktopProfile.astro';
 export async function getStaticPaths() {
   const teamEntries = await getCollection('team');
   return teamEntries.map(entry => ({
-    params: { slug: entry.id },
+    // slug debe ser un array para rutas dinámicas
+    //params: { slug: entry.id },
+    params: { slug: [entry.id] },
     props: { entry },
-  }));
+}));
 }
 
-const { entry } = Astro.props;
-const { Content } = await render(entry);
-const heroContent = {
-  title: entry.data.name,
-  description: entry.data.jobTitle,
+// slugArray siempre será un array de strings
+let slugArray = Astro.params.slug;
+if (!Array.isArray(slugArray)) {
+  slugArray = [slugArray];
+}
+
+// slugString será el slug como string, útil si lo necesitas
+const posts = await getCollection('team');
+const slugString = slugArray.join('/');
+
+//const { entry } = Astro.props;
+const entry = posts.find((p) => p.id === slugString);
+
+let Content, heroContent;
+if (entry) {
+  ({ Content } = await render(entry));
+  //const { Content } = await render(entry);
+  heroContent = {
+    title: entry.data.name,
+    description: entry.data.jobTitle,
+  };
 }
 ---
 
-<Layout title={entry.data.name} description={`Team member: ${entry.data.name}`}>
-  <InnerHero content={heroContent} />
-  <div class="site-container mx-auto px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-0">
-      <!-- Profile Sidebar -->
+{entry ? (
+  <Layout title={entry.data.name} description={`Team member: ${entry.data.name}`}>
+    {heroContent && <InnerHero content={heroContent} />}
+    <div class="site-container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-0">
+        {/* Profile Sidebar */}
+
       <div class="lg:col-span-1 relative">
+      {/* ...rest of your code... */}
+
         <div class="absolute inset-0 bg-white border-l border-r border-black lg:block hidden"></div>
         <div class="lg:sticky lg:top-24">
           <div class="relative lg:p-6">
@@ -46,4 +68,7 @@ const heroContent = {
       </div>
     </div>
   </div>
-</Layout>
+  </Layout>
+) : (
+  <div>No se encontró un miembro del equipo.</div>
+)

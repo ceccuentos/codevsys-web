@@ -1,9 +1,9 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../../chunks/Layout_DAN-WyZE.mjs';
+import { a as $$Layout } from '../../chunks/Layout_BJBcm7r5.mjs';
 import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
-import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_DzXqKdRC.mjs';
-import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_BGW8U6ZE.mjs';
+import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_XDpgdDC5.mjs';
+import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_BugBildx.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Integraciones = createComponent(($$result, $$props, $$slots) => {

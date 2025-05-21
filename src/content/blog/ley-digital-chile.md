@@ -35,7 +35,7 @@ Las empresas obligadas deberán implementar sistemas de gestión de seguridad de
 
 Aunque su entrada en vigencia plena será en diciembre de 2026, esta ley ya plantea desafíos inmediatos. Obliga a las empresas a justificar cada tratamiento de datos, implementar principios de privacidad por diseño y por defecto, notificar brechas, y asegurar mecanismos efectivos para que los titulares ejerzan sus derechos (acceso, rectificación, supresión, etc.).
 
-Introduce además conceptos técnicos como [anonimización](https://www.pjud.cl/docs/download/57691) (dato no rastreable) y [seudonimización](https://cloud.google.com/sensitive-data-protection/docs/pseudonymization?hl=es-419) (dato indirecto), los cuales tendrán exigencias técnicas específicas, a ser detalladas en reglamentos posteriores.
+Introduce además conceptos técnicos como [anonimización](https://www.pjud.cl/docs/download/57691) (procedimiento irreversible donde el dato deja de ser personal) y [seudonimización](https://cloud.google.com/sensitive-data-protection/docs/pseudonymization?hl=es-419) (tratamiento que impide atribuir datos a un titular sin información adicional,), los cuales tendrán exigencias técnicas específicas, a ser detalladas en reglamentos posteriores.
 
 **Implicancias para el sector público:** Todos los documentos públicos que contengan datos personales, particularmente aquellos utilizados con fines estadísticos, históricos o científicos, deberán ser anonimizados antes de su publicación. La ley establece que los órganos públicos que reciban datos para tratamiento específico sólo podrán conservarlos mientras sea necesario para ese fin. Posteriormente, deberán eliminarlos o anonimizar su contenido, salvo que existan razones legales fundadas para conservarlos.
 

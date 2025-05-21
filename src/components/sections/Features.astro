@@ -78,11 +78,12 @@ const paddingClass = getPaddingClass({
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-auto-fit gap-8 auto-rows-fr">
             {features.map((feature, index) => (
-                <div
+                <a
+                    href={`/servicios/${feature.slug}`}
                     class:list={[
-                        "p-6 rounded-lg border border-black",
+                        "p-6 rounded-lg border border-black transition-shadow hover:shadow-lg cursor-pointer",
                         background === 'dark' ? 'bg-background-base/10' : 'bg-background/90',
-                        "flex flex-col"
+                        "flex flex-col no-underline"
                     ]}
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
@@ -110,8 +111,7 @@ const paddingClass = getPaddingClass({
                     <p class:list={["text-base", textColor, "opacity-90"]}>
                         {feature.description}
                     </p>
-                    <a href={`/servicios/${feature.slug}`} class="mt-4 text-primary underline font-medium inline-block transition-colors duration-200 hover:text-primary/80">Ver más &rarr;</a>
-                </div>
+                </a>
             ))}
         </div>
     </div>

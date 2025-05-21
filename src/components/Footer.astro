@@ -3,6 +3,14 @@ import { footerMenu, legalMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 import Button from '@components/ui/Button.astro';
 import { siteConfig } from '@data/config';
+import NewsletterForm from '@components/forms/NewsletterForm.astro';
+
+const newsLetterForm = {
+  title: "¡Suscríbete a nuestro boletín!",
+  description: "Recibe novedades y noticias en tu correo.",
+  successTitle: "¡Inscripción exitosa!",
+  successMessage: "Gracias por suscribirte. Pronto recibirás novedades."
+};
 
 interface ButtonProps {
   text: string;
@@ -78,6 +86,10 @@ const currentYear = new Date().getFullYear();
           </ul>
         </nav>
       </div>
+
+      <!-- <div class="col-span-1">
+        <NewsletterForm content={newsLetterForm} background="light" padding="base" />
+      </div> -->
     </div>
 
     <div class="mt-8 flex flex-col md:flex-row justify-between items-center">

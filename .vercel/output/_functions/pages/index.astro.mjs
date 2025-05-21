@@ -1,11 +1,11 @@
 import { a as createAstro, c as createComponent, m as maybeRenderHead, r as renderComponent, d as addAttribute, b as renderTemplate } from '../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { b as $$Button, d as createSvgComponent, a as $$Layout } from '../chunks/Layout_DAN-WyZE.mjs';
+import { b as $$Button, d as createSvgComponent, a as $$Layout } from '../chunks/Layout_BJBcm7r5.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
-import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_BGW8U6ZE.mjs';
+import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_BugBildx.mjs';
 import { g as getPaddingClass, a as getBackgroundColor, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
 /* empty css                                 */
-import { g as getCollection } from '../chunks/_astro_content_BA2AxaBL.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CabX-IJ_.mjs';
 import { $ as $$BlogPost } from '../chunks/BlogPost_vS9ZV2io.mjs';
 export { renderers } from '../renderers.mjs';
 
@@ -39,14 +39,14 @@ const $$Features = createComponent(($$result, $$props, $$slots) => {
     paddingTop: Astro2.props.paddingTop,
     paddingBottom: Astro2.props.paddingBottom
   });
-  return renderTemplate`${maybeRenderHead()}<section${addAttribute(["relative", bgColor, paddingClass], "class:list")} data-astro-cid-uz7do4zo> <div class="site-container px-4" data-astro-cid-uz7do4zo> ${(title || description) && renderTemplate`<div class="text-center mb-16 max-w-3xl mx-auto" data-astro-cid-uz7do4zo> ${eyebrow && renderTemplate`${renderComponent($$result, "Eyebrow", $$Eyebrow, { "text": eyebrow, "background": background, "data-astro-cid-uz7do4zo": true })}`} ${title && renderTemplate`<h2${addAttribute([textColor], "class:list")} data-aos="fade-up" data-astro-cid-uz7do4zo> ${title} </h2>`} ${description && renderTemplate`<p${addAttribute(["mt-4", textColor, "opacity-90"], "class:list")} data-aos="fade-up" data-aos-delay="100" data-astro-cid-uz7do4zo> ${description} </p>`} ${button && renderTemplate`<div class="mt-8" data-aos="fade-up" data-aos-delay="200" data-astro-cid-uz7do4zo> ${renderComponent($$result, "Button", $$Button, { "href": button.link, "variant": button.variant || "primary", "data-astro-cid-uz7do4zo": true }, { "default": ($$result2) => renderTemplate`${button.text}` })} </div>`} </div>`} <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-auto-fit gap-8 auto-rows-fr" data-astro-cid-uz7do4zo> ${features.map((feature, index) => renderTemplate`<div${addAttribute([
-    "p-6 rounded-lg border border-black",
+  return renderTemplate`${maybeRenderHead()}<section${addAttribute(["relative", bgColor, paddingClass], "class:list")} data-astro-cid-uz7do4zo> <div class="site-container px-4" data-astro-cid-uz7do4zo> ${(title || description) && renderTemplate`<div class="text-center mb-16 max-w-3xl mx-auto" data-astro-cid-uz7do4zo> ${eyebrow && renderTemplate`${renderComponent($$result, "Eyebrow", $$Eyebrow, { "text": eyebrow, "background": background, "data-astro-cid-uz7do4zo": true })}`} ${title && renderTemplate`<h2${addAttribute([textColor], "class:list")} data-aos="fade-up" data-astro-cid-uz7do4zo> ${title} </h2>`} ${description && renderTemplate`<p${addAttribute(["mt-4", textColor, "opacity-90"], "class:list")} data-aos="fade-up" data-aos-delay="100" data-astro-cid-uz7do4zo> ${description} </p>`} ${button && renderTemplate`<div class="mt-8" data-aos="fade-up" data-aos-delay="200" data-astro-cid-uz7do4zo> ${renderComponent($$result, "Button", $$Button, { "href": button.link, "variant": button.variant || "primary", "data-astro-cid-uz7do4zo": true }, { "default": ($$result2) => renderTemplate`${button.text}` })} </div>`} </div>`} <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-auto-fit gap-8 auto-rows-fr" data-astro-cid-uz7do4zo> ${features.map((feature, index) => renderTemplate`<a${addAttribute(`/servicios/${feature.slug}`, "href")}${addAttribute([
+    "p-6 rounded-lg border border-black transition-shadow hover:shadow-lg cursor-pointer",
     background === "dark" ? "bg-background-base/10" : "bg-background/90",
-    "flex flex-col"
+    "flex flex-col no-underline"
   ], "class:list")} data-aos="fade-up"${addAttribute(index * 100, "data-aos-delay")} data-astro-cid-uz7do4zo> ${feature.image && renderTemplate`<img${addAttribute(feature.image, "src")}${addAttribute(feature.title, "alt")} class="w-full h-80 object-cover rounded-lg mb-4 border border-gray-200" loading="lazy" data-astro-cid-uz7do4zo>`} <div${addAttribute([
     "w-12 h-12 flex items-center justify-center rounded-lg mb-4",
     "bg-primary"
-  ], "class:list")} data-astro-cid-uz7do4zo> ${renderComponent($$result, "feature.icon", feature.icon, { "size": 24, "class": "text-white", "data-astro-cid-uz7do4zo": true })} </div> <h3${addAttribute(["text-h4 mb-2", textColor], "class:list")} data-astro-cid-uz7do4zo> ${feature.title} </h3> <p${addAttribute(["text-base", textColor, "opacity-90"], "class:list")} data-astro-cid-uz7do4zo> ${feature.description} </p> <a${addAttribute(`/servicios/${feature.slug}`, "href")} class="mt-4 text-primary underline font-medium inline-block transition-colors duration-200 hover:text-primary/80" data-astro-cid-uz7do4zo>Ver más &rarr;</a> </div>`)} </div> </div> </section> `;
+  ], "class:list")} data-astro-cid-uz7do4zo> ${renderComponent($$result, "feature.icon", feature.icon, { "size": 24, "class": "text-white", "data-astro-cid-uz7do4zo": true })} </div> <h3${addAttribute(["text-h4 mb-2", textColor], "class:list")} data-astro-cid-uz7do4zo> ${feature.title} </h3> <p${addAttribute(["text-base", textColor, "opacity-90"], "class:list")} data-astro-cid-uz7do4zo> ${feature.description} </p> </a>`)} </div> </div> </section> `;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/components/sections/Features.astro", void 0);
 
 const $$Astro$1 = createAstro("http://localhost:4321");
@@ -63,7 +63,7 @@ const $$Logos = createComponent(($$result, $$props, $$slots) => {
     paddingTop: Astro2.props.paddingTop,
     paddingBottom: Astro2.props.paddingBottom
   });
-  return renderTemplate`${maybeRenderHead()}<section${addAttribute(["relative", bgColor, paddingClass], "class:list")}> <div class="site-container px-4 text-center"> ${eyebrow && renderTemplate`${renderComponent($$result, "Eyebrow", $$Eyebrow, { "text": eyebrow, "background": background, "className": "text-center" })}`} <div class="flex flex-wrap justify-center gap-16"> ${logos.map((logo, index) => renderTemplate`<div class="logo-wrapper flex justify-center items-center w-32 h-20" data-aos="fade-up"${addAttribute(index * 100, "data-aos-delay")}> ${renderComponent($$result, "Image", $$Image, { "src": logo.src, "alt": logo.alt, "class": "h-8 md:h-10 w-auto transition-all duration-300 object-contain object-center filter grayscale hover:grayscale-0 opacity-75 hover:opacity-100", "width": 200, "height": 80, "width": 500, "height": 500 })} </div>`)} </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section${addAttribute(["relative", bgColor, paddingClass], "class:list")}> <div class="site-container px-4 text-center"> ${eyebrow && renderTemplate`${renderComponent($$result, "Eyebrow", $$Eyebrow, { "text": eyebrow, "background": background, "className": "text-center" })}`} <div class="flex flex-wrap justify-center gap-16"> ${logos.map((logo, index) => renderTemplate`<div class="logo-wrapper flex justify-center items-center w-32 h-20 md:w-48 md:h-32" data-aos="fade-up"${addAttribute(index * 100, "data-aos-delay")}> ${renderComponent($$result, "Image", $$Image, { "src": logo.src, "alt": logo.alt, "class": "h-8 md:h-16 w-auto transition-all duration-300 object-contain object-center filter grayscale hover:grayscale-0 opacity-75 hover:opacity-100", "width": 200, "height": 80, "width": 500, "height": 500 })} </div>`)} </div> </div> </section>`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/components/sections/Logos.astro", void 0);
 
 const logo_panelexpertos = new Proxy({"src":"/_astro/logo-panelexpertos.BZUqBXcS.png","width":235,"height":80,"format":"png"}, {

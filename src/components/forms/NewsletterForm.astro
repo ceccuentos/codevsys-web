@@ -1,0 +1,118 @@
+---
+import Button from "@components/ui/Button.astro";
+import Input from "@components/ui/form/Input.astro";
+
+import type { ThemeColor, PaddingSize } from '@utils/styleUtils';
+
+export interface Props {
+  content: {
+    title?: string;
+    description?: string;
+    successTitle?: string;
+    successMessage?: string;
+    fileDownload?: string;
+  };
+  background?: ThemeColor;
+  padding?: PaddingSize;
+  paddingTop?: PaddingSize;
+  paddingBottom?: PaddingSize;
+}
+
+const {
+  content: {
+    title = '',
+    description = '',
+    successTitle = '¡Inscripción exitosa!',
+    successMessage = 'Gracias por suscribirte. Pronto recibirás novedades.',
+    fileDownload = ''
+  },
+  background = 'light',
+  padding,
+  paddingTop,
+  paddingBottom
+} = Astro.props;
+---
+<form id="newsletter-form" class={`space-y-6 bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto text-lg bg-${background}`}>
+  {title && <h2 class="text-xl font-bold mb-4">{title}</h2>}
+  {description && <p class="mb-6">{description}</p>}
+  <Input
+    label="Email"
+    type="email"
+    id="email"
+    name="email"
+    required
+    background={background}
+    class="w-full text-lg px-6 py-3"
+  />
+  <input type="hidden" name="fileDownload" value={fileDownload || ''} />
+  <input type="hidden" name="description" value={description || ''} />
+  <div class="mt-8 flex justify-center">
+    <Button type="submit" class="w-full sm:w-auto mx-auto text-lg px-8 py-3">{fileDownload ? 'Descargar' : 'Suscribirse'}</Button>
+  </div>
+  <div id="newsletter-message" class="mt-4 text-center text-base"></div>
+</form>
+
+<!-- Modal de éxito -->
+<div id="newsletter-success-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:50; align-items:center; justify-content:center;">
+  <div style="background:white; padding:2rem 1.5rem; border-radius:0.75rem; max-width:90vw; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <h2 class="text-xl font-bold mb-4">{successTitle}</h2>
+    <p class="mb-6">{successMessage}</p>
+    <button id="newsletter-close-modal-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('newsletter-form');
+  const modal = document.getElementById('newsletter-success-modal');
+  const closeModalBtn = document.getElementById('newsletter-close-modal-btn');
+  const messageDiv = document.getElementById('newsletter-message');
+
+
+  if (form instanceof HTMLFormElement && modal && closeModalBtn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      messageDiv && (messageDiv.textContent = '');
+      const formData = new FormData(form);
+
+      // Los campos fileDownload y description ya vienen del formulario (inputs ocultos)
+      for (const [key, value] of formData.entries()) {
+
+      }
+      try {
+
+        const response = await fetch('/api/newsletter', {
+          method: 'POST',
+          body: formData
+        });
+        let data;
+        try {
+          data = await response.json();
+        } catch (e) {
+          console.error("[NewsletterForm] Error parsing JSON:", e);
+          alert("Error inesperado en la respuesta del servidor (JSON).");
+          return;
+        }
+
+        if (response.ok) {
+          modal.style.display = 'flex';
+          if (data.downloadUrl) {
+
+            window.open(data.downloadUrl, '_blank');
+          }
+        } else {
+          messageDiv && (messageDiv.textContent = data.error || 'Ocurrió un error al enviar el formulario. Intenta nuevamente.');
+          messageDiv && (messageDiv.className = 'mt-4 text-center text-base text-red-600');
+          alert("Error en la suscripción: " + (data.error || 'Ocurrió un error al enviar el formulario.'));
+        }
+      } catch (err) {
+        console.error("[NewsletterForm] Error en fetch:", err);
+        alert("Error de red o de servidor: " + err);
+      }
+    });
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      form.reset();
+      messageDiv && (messageDiv.textContent = '');
+    });
+  }
+</script>
