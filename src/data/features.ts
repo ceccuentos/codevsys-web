@@ -51,19 +51,19 @@ export const featureLists: Record<string, FeatureList> = {
                         id: 'nerc-cip-2',
                         title: 'Gestión de Riesgos CIP',
                         description: 'Evaluamos riesgos operacionales y cibernéticos, priorizando controles para cumplir con los requerimientos regulatorios y proteger la infraestructura crítica.',
-                        image: '../src/assets/images/servicios/nerc-cip/riesgos.webp'
+                        image: '/images/servicios/nerc-cip/riesgos.webp'
                     },
                     {
                         id: 'nerc-cip-3',
                         title: 'Capacitación y Awareness CIP',
                         description: 'Diseñamos programas de formación y cultura de ciberseguridad alineados con NERC-CIP, enfocados en roles operacionales y técnicos.',
-                        image: '../src/assets/images/servicios/nerc-cip/capacitacion.webp'
+                        image: '/images/servicios/nerc-cip/capacitacion.webp'
                     },
                     {
                         id: 'nerc-cip-4',
                         title: 'Plan de Cumplimiento CIP',
                         description: 'Creamos un plan detallado de implementación de controles y evidencia para auditorías del Coordinador Eléctrico Nacional.',
-                        image: '../src/assets/images/servicios/nerc-cip/plan.webp'
+                        image: '/images/servicios/nerc-cip/plan.webp'
                     }
                 ]
             },
