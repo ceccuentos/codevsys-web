@@ -34,10 +34,6 @@ const slugString = slugArray.join('/');
 // Buscar la categoría manualmente usando el slug como string
 const category = categories.find(cat => cat.slug === slugString);
 
-console.log('Valor calculado de category:', category);
-console.log('Valor Astro.props:', Astro.props);
-console.log('Valor de Astro.params:', Astro.params);
-
 if (!category) {
   throw new Error("No se encontró la categoría para este slug.");
 }
