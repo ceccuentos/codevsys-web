@@ -8,6 +8,7 @@ Este proyecto es una página web desarrollada con [Astro](https://astro.build/) 
 - **Tailwind CSS**: Utilizado para la creación rápida de estilos mediante clases utilitarias.
 - **TypeScript**: Tipado estático para JavaScript, mejora la mantenibilidad y escalabilidad.
 - **PostCSS** y **Autoprefixer**: Procesamiento de CSS y compatibilidad entre navegadores.
+- **Supabase**: Plataforma Backend-as-a-Service utilizada para almacenamiento de archivos (brochures) y gestión de base de datos para la suscripción al newsletter.
 
 ## Quick Start
 Para ejecutar el proyecto, siga estos pasos:
@@ -54,6 +55,15 @@ npm run dev
 - Variables de entorno en `.env` y `.env.production`.
 - Carpeta `dist/` para el output de producción (ignorada por git).
 
+### Variables de entorno para Supabase
+Debes definir las siguientes variables en tu archivo `.env`:
+
+```env
+SUPABASE_API_URL=tu_url_supabase
+SUPABASE_API_ANON=tu_anon_key_supabase
+```
+Estas variables permiten la conexión segura con los servicios de almacenamiento y base de datos de Supabase.
+
 ## Instalación y uso
 1. Instala dependencias:
    ```sh
@@ -71,6 +81,17 @@ npm run dev
    ```sh
    npm run preview
    ```
+
+## Servicios integrados con Supabase
+
+El proyecto utiliza Supabase para los siguientes servicios:
+
+- **Almacenamiento de brochures**: Los archivos PDF y otros materiales descargables se almacenan en un bucket de Supabase Storage llamado `codevsys-web`. Se generan enlaces de descarga temporales (signed URLs) para que los usuarios puedan acceder a los brochures de forma segura.
+- **Base de datos para suscripción a newsletter**: Los datos de suscripción (email, fecha, tipo, descripción) se almacenan en la tabla `subscription` de la base de datos Supabase, permitiendo una gestión sencilla y segura de los suscriptores.
+
+La integración se realiza desde el backend (API routes) mediante el SDK oficial de Supabase (`@supabase/supabase-js`).
+
+---
 
 ## Notas adicionales
 - Para estilos personalizados, usa utilidades de Tailwind y la directiva `@apply` en los CSS.
