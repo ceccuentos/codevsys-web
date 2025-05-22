@@ -5,12 +5,15 @@ export const headerMenu = [
     { name: 'Blog', link: '/blog' },
     { name: 'Servicios', showArrow: false,
         children: [
-            { name: 'NERC-CIP', link: '/servicios/nerc-cip' },
-            { name: 'IA Generativa', link: '/servicios/ia' },
-            { name: 'Ley Ciberseguridad', link: '/servicios/ley-marco-ciberseguridad' },
+            { name: 'Estándar NERC-CIP', link: '/servicios/nerc-cip' },
+            { name: 'Apps IA Generativa', link: '/servicios/ia' },
+            { name: 'Ley Ciberseguridad Chile', link: '/servicios/ley-marco-ciberseguridad' },
             { name: 'Integración de Aplicaciones', link: '/servicios/integraciones' },
         ]
-    }
+    },
+    { name: 'Aula Virtual', showArrow: false, children: [
+        { name: 'Aula Sonnedix', link: 'https://aulasx.codevsys.cl/login', target: '_blank' },
+    ]},
 ];
 
 export const footerMenu = [

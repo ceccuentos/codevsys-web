@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro"
 import InnerHero from "@components/sections/InnerHero.astro"
 import FeatureDetails from "@components/sections/FeatureDetails.astro";
+import Subscription from "@components/sections/Subscription.astro";
 import { getFeatureBySlug } from "@data/features";
 import Stats from '@components/sections/Stats.astro';
 import { statsLists } from '@data/stats';
@@ -41,6 +42,22 @@ const sideBySideStats = {
     }
 };
 
+const styleGuideSection = {
+  eyebrow: "Seguridad Operacional",
+  headline: "Descarga la guía del Plan de Recuperación ante Desastres",
+  description: "Prepárate ante incidentes críticos. Descarga nuestra guía basada en el estándar NERC-CIP y fortalece tu resiliencia operativa.",
+  newsLetterForm: [
+    {
+      title: "Descarga la Guía del Plan de Recuperación ante Desastres",
+      description: "Incluye evaluación de riesgos, protocolos de respuesta, respaldo de sistemas y simulacros bajo el marco NERC-CIP. Ideal para plantas eléctricas y OT.",
+      successTitle: "¡Descarga exitosa!",
+      successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas.",
+      buttonText: "Descargar ahora",
+      fileDownload: "Plan_Recuperacion_NERC_CIP.pdf",
+    }
+  ],
+}
+
 ---
 
 <Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp">
@@ -77,4 +94,5 @@ const sideBySideStats = {
     </div>
 
     <Stats content={sideBySideStats} background='base' padding="base"/>
+    <Subscription content={styleGuideSection} imagePosition="right" background="light" padding="base"  />
 </Layout>

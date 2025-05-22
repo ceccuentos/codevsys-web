@@ -1,11 +1,12 @@
 import { a as createAstro, c as createComponent, m as maybeRenderHead, r as renderComponent, d as addAttribute, b as renderTemplate } from '../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { b as $$Button, d as createSvgComponent, a as $$Layout } from '../chunks/Layout_BJBcm7r5.mjs';
+import { b as $$Button, d as createSvgComponent, a as $$Layout } from '../chunks/Layout_DNILZkIK.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
-import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_BugBildx.mjs';
-import { g as getPaddingClass, a as getBackgroundColor, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
+import { $ as $$Eyebrow, f as featureLists } from '../chunks/Eyebrow_BI2u-5qU.mjs';
+import { c as getPaddingClass, d as getBackgroundColor, e as getTextColor } from '../chunks/styleUtils_BtOvH2bT.mjs';
 /* empty css                                 */
-import { g as getCollection } from '../chunks/_astro_content_CabX-IJ_.mjs';
+import { $ as $$Subscription } from '../chunks/Subscription_DigQO8mk.mjs';
+import { g as getCollection } from '../chunks/_astro_content_BCIsIKml.mjs';
 import { $ as $$BlogPost } from '../chunks/BlogPost_vS9ZV2io.mjs';
 export { renderers } from '../renderers.mjs';
 
@@ -260,7 +261,23 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
       variant: "primary"
     }
   };
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "footerCta": FooterCta, "title": seoTitle, "description": seoDescription }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, { "content": heroContent })} ${renderComponent($$result2, "Features", $$Features, { "content": featuresSection, "padding": "base", "background": "light" })} ${renderComponent($$result2, "RecentPosts", $$RecentPosts, { "content": recentPostsSection, "background": "base", "padding": "base", "postsToShow": 3, "category": "" })} ${renderComponent($$result2, "Logos", $$Logos, { "content": logosSection, "background": "base", "padding": "large" })} ` })}`;
+  const styleGuideSection = {
+    eyebrow: "S\xEDguenos",
+    headline: "Suscr\xEDbete al Newsletter",
+    description: "Mantente informado sobre ciberseguridad, NERC-CIP, IA generativa, innovaci\xF3n tecnol\xF3gica y mejores pr\xE1cticas para industrias cr\xEDticas.",
+    newsLetterForm: [
+      {
+        title: "\xA1Recibe nuestras actualizaciones peri\xF3dicas!",
+        description: "Ent\xE9rate antes que nadie sobre nuevas regulaciones, casos de uso de IA generativa, herramientas de automatizaci\xF3n y tendencias tecnol\xF3gicas clave para tu empresa.",
+        successTitle: "\xA1Suscripci\xF3n exitosa!",
+        successMessage: "Gracias por unirte. Revisa tu bandeja de entrada para comenzar a recibir nuestros contenidos exclusivos.",
+        buttonText: "Suscribirme",
+        fileDownload: null
+      }
+    ]
+  };
+  return renderTemplate`---
+${renderComponent($$result, "Layout", $$Layout, { "footerCta": FooterCta, "title": seoTitle, "description": seoDescription }, { "default": ($$result2) => renderTemplate`${renderComponent($$result2, "Hero", $$Hero, { "content": heroContent })}${renderComponent($$result2, "Features", $$Features, { "content": featuresSection, "padding": "base", "background": "light" })}${renderComponent($$result2, "RecentPosts", $$RecentPosts, { "content": recentPostsSection, "background": "base", "padding": "base", "postsToShow": 3, "category": "" })}${renderComponent($$result2, "Logos", $$Logos, { "content": logosSection, "background": "base", "padding": "large" })}${renderComponent($$result2, "Subscription", $$Subscription, { "content": styleGuideSection, "imagePosition": "right", "background": "light", "padding": "base" })}` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/index.astro", void 0);
 
 const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/index.astro";

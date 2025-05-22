@@ -10,8 +10,6 @@ import Subscription from '@components/sections/Subscription.astro';
 import RecentPosts from '@components/sections/RecentPosts.astro';
 import heroImage from '../assets/images/home/default-hero-codevsys.webp';
 
-import NewsletterForm from '@components/forms/NewsletterForm.astro';
-
 const seoTitle = "Codevsys - Ciberseguridad, IA Generativa a tu alcance"
 const seoDescription = "Cumple con NERC CIP y protege tus sistemas OT. En CODEVSYS ofrecemos soluciones de ciberseguridad especializadas para empresas eléctricas, integrando tecnología, normativas y protección crítica.";
 
@@ -59,9 +57,6 @@ const FooterCta = {
     }
 }
 
-
-
-
 const logosSection = {
     eyebrow: "Nuestros Clientes",
     logos: logoLists.main.logos
@@ -78,24 +73,6 @@ const recentPostsSection = {
     }
 }
 
-
-
-// const styleGuideSection = {
-//     eyebrow: "Síguenos",
-//     headline: "Mantente al día con nuestras publicaciones",
-//     description: "Continúa teniendo en cuenta nuestras publicaciones y noticias más recientes.",
-//     newsLetterForm : [
-//         {
-//             title: "!Suscríbete a nuestro boletín!",
-//             description: "",
-//             successTitle: "¡Inscripción exitosa!",
-//             successMessage: "Gracias por suscribirte. Pronto recibirás novedades.",
-//             buttonText: "Suscribirse",
-//         }
-//     ],
-
-// }
-
 const styleGuideSection = {
   eyebrow: "Síguenos",
   headline: "Suscríbete al Newsletter",
@@ -107,15 +84,11 @@ const styleGuideSection = {
       successTitle: "¡Suscripción exitosa!",
       successMessage: "Gracias por unirte. Revisa tu bandeja de entrada para comenzar a recibir nuestros contenidos exclusivos.",
       buttonText: "Suscribirme",
-      fileDownload: null
+      fileDownload: ""
     }
-  ]
+  ],
 };
 
-
-
-
----
 ---
 
 <Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>

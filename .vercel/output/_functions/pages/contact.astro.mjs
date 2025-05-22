@@ -1,56 +1,26 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute, F as Fragment, e as renderScript } from '../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { $ as $$, b as $$Button, s as siteConfig, a as $$Layout } from '../chunks/Layout_BJBcm7r5.mjs';
+import { $ as $$, b as $$Button, s as siteConfig, a as $$Layout } from '../chunks/Layout_DNILZkIK.mjs';
 import { $ as $$InnerHero } from '../chunks/InnerHero_7903qgB1.mjs';
+import { $ as $$Input } from '../chunks/Input_oZmunsqd.mjs';
 import 'clsx';
-import { d as getHeadlineColor, e as getInputBackgroundColor, f as getInputTextColor, a as getBackgroundColor, g as getPaddingClass, b as getTextColor } from '../chunks/styleUtils_tC4Hqp-N.mjs';
-import { $ as $$Mail } from '../chunks/Mail_BbdsRm7S.mjs';
+import { g as getHeadlineColor, a as getInputBackgroundColor, b as getInputTextColor, d as getBackgroundColor, c as getPaddingClass, e as getTextColor } from '../chunks/styleUtils_BtOvH2bT.mjs';
+import { $ as $$Mail } from '../chunks/Mail_ScCvjSlP.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro$7 = createAstro("http://localhost:4321");
+const $$Astro$6 = createAstro("http://localhost:4321");
 const $$MapPin = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$MapPin;
   return renderTemplate`${renderComponent($$result, "Layout", $$, { "iconName": "map-pin", ...Astro2.props }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path> <circle cx="12" cy="10" r="3"></circle> ` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/node_modules/lucide-astro/dist/MapPin.astro", void 0);
 
-const $$Astro$6 = createAstro("http://localhost:4321");
+const $$Astro$5 = createAstro("http://localhost:4321");
 const $$Phone = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$Phone;
   return renderTemplate`${renderComponent($$result, "Layout", $$, { "iconName": "phone", ...Astro2.props }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> ` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/node_modules/lucide-astro/dist/Phone.astro", void 0);
-
-const $$Astro$5 = createAstro("http://localhost:4321");
-const $$Input = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
-  Astro2.self = $$Input;
-  const {
-    label,
-    type = "text",
-    id,
-    name,
-    placeholder = "",
-    required = false,
-    disabled = false,
-    background = "base",
-    class: className = ""
-  } = Astro2.props;
-  const labelClass = getHeadlineColor(background);
-  const inputBgClass = getInputBackgroundColor(background);
-  const inputTextClass = getInputTextColor(background);
-  return renderTemplate`${maybeRenderHead()}<div class="form-group"> <label${addAttribute(id, "for")}${addAttribute(`block text-sm font-medium mb-1 ${labelClass}`, "class")}> ${label} ${required && renderTemplate`<span class="text-red-500">*</span>`} </label> <input${addAttribute(type, "type")}${addAttribute(id, "id")}${addAttribute(name, "name")}${addAttribute(placeholder, "placeholder")}${addAttribute(required, "required")}${addAttribute(disabled, "disabled")}${addAttribute(`
-            w-full px-4 py-2 
-            ${inputBgClass}
-            ${inputTextClass}
-            border border-primary/20
-            rounded-lg 
-            focus:ring-2 focus:ring-primary focus:border-primary 
-            disabled:bg-background-dark/10 disabled:text-body-base/50 disabled:cursor-not-allowed 
-            placeholder:text-body-base/50
-            ${className}
-        `, "class")}> </div>`;
-}, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/components/ui/form/Input.astro", void 0);
 
 const $$Astro$4 = createAstro("http://localhost:4321");
 const $$Textarea = createComponent(($$result, $$props, $$slots) => {

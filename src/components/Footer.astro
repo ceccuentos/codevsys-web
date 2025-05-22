@@ -87,14 +87,31 @@ const currentYear = new Date().getFullYear();
         </nav>
       </div>
 
-      <!-- <div class="col-span-1">
-        <NewsletterForm content={newsLetterForm} background="light" padding="base" />
-      </div> -->
+      <div class="col-span-1">
+        <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+        <div class="flex items-center gap-4">
+          {siteConfig.Socials.LinkedIn && (
+            <a href={siteConfig.Socials.LinkedIn} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-primary transition-colors">
+              <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.5c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.6h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/>
+              </svg>
+            </a>
+          )}
+          {siteConfig.Socials.Youtube && (
+            <a href={siteConfig.Socials.Youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-primary transition-colors">
+              <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a2.97 2.97 0 0 0-2.088-2.088C19.454 3.5 12 3.5 12 3.5s-7.454 0-9.41.598a2.97 2.97 0 0 0-2.088 2.088C0 8.142 0 12 0 12s0 3.858.502 5.814a2.97 2.97 0 0 0 2.088 2.088C4.546 20.5 12 20.5 12 20.5s7.454 0 9.41-.598a2.97 2.97 0 0 0 2.088-2.088C24 15.858 24 12 24 12s0-3.858-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          )}
+          <!-- Agrega más redes sociales aquí en el futuro -->
+        </div>
+      </div>
     </div>
 
     <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
       <div class="text-body-dark text-sm">
-        © {currentYear} {siteConfig.companyName}. Todos los derechos reservados.
+        {currentYear} {siteConfig.companyName}. Todos los derechos reservados.
       </div>
 
       <nav class="mt-4 md:mt-0">

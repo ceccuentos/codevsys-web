@@ -1,9 +1,9 @@
 import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../chunks/_astro_content_CabX-IJ_.mjs';
-import { $ as $$PaginatedBlogLayout } from '../../chunks/PaginatedBlogLayout_CfqCN8UE.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_BCIsIKml.mjs';
+import { $ as $$PaginatedBlogLayout } from '../../chunks/PaginatedBlogLayout_CgeDwAGr.mjs';
 import { c as categories } from '../../chunks/BlogPost_vS9ZV2io.mjs';
-import { c as blogSetting } from '../../chunks/Layout_BJBcm7r5.mjs';
+import { c as blogSetting } from '../../chunks/Layout_DNILZkIK.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro("http://localhost:4321");
@@ -15,14 +15,26 @@ async function getStaticPaths() {
     (category) => allPosts.some((post) => post.data.categories?.includes(category.name))
   );
   return activeCategories.map((category) => ({
-    params: { slug: category.slug },
+    params: { slug: [category.slug] },
+    // slug debe ser un array
     props: { category }
   }));
 }
 const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$;
-  const { category } = Astro2.props;
+  let slugArray = Astro2.params.slug;
+  if (!Array.isArray(slugArray)) {
+    slugArray = [slugArray];
+  }
+  const slugString = slugArray.join("/");
+  const category = categories.find((cat) => cat.slug === slugString);
+  console.log("Valor calculado de category:", category);
+  console.log("Valor Astro.props:", Astro2.props);
+  console.log("Valor de Astro.params:", Astro2.params);
+  if (!category) {
+    throw new Error("No se encontró la categoría para este slug.");
+  }
   const currentPage = parseInt(Astro2.url.searchParams.get("page") || "1");
   const posts = await getCollection("blog", ({ data }) => {
     const isPublished = data.publish !== false;

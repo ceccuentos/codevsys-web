@@ -9,7 +9,7 @@ export const siteConfig = {
       LinkedIn: 'https://www.linkedin.com/company/106058190/',
       Email: 'info@codevsys.cl',
       Phone: '+569 914 17504',
-      Location: 'Roberto del Rio 170, Providencia, Santiago-Chile',
+      Location: 'Roberto del Rio 1780, Providencia, Santiago-Chile',
   }
 };
 

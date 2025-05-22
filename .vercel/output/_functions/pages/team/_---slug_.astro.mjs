@@ -1,11 +1,11 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { r as renderEntry, g as getCollection } from '../../chunks/_astro_content_CabX-IJ_.mjs';
-import { $ as $$$1, a as $$Layout } from '../../chunks/Layout_BJBcm7r5.mjs';
+import { g as getCollection, r as renderEntry } from '../../chunks/_astro_content_BCIsIKml.mjs';
+import { $ as $$$1, a as $$Layout } from '../../chunks/Layout_DNILZkIK.mjs';
 import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
 import 'clsx';
 import { $ as $$Image } from '../../chunks/_astro_assets_Cbj1YpFU.mjs';
-import { $ as $$Mail } from '../../chunks/Mail_BbdsRm7S.mjs';
+import { $ as $$Mail } from '../../chunks/Mail_ScCvjSlP.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$5 = createAstro("http://localhost:4321");
@@ -50,20 +50,31 @@ const $$Astro = createAstro("http://localhost:4321");
 async function getStaticPaths() {
   const teamEntries = await getCollection("team");
   return teamEntries.map((entry) => ({
-    params: { slug: entry.id },
+    // slug debe ser un array para rutas dinámicas
+    //params: { slug: entry.id },
+    params: { slug: [entry.id] },
     props: { entry }
   }));
 }
 const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$;
-  const { entry } = Astro2.props;
-  const { Content } = await renderEntry(entry);
-  const heroContent = {
-    title: entry.data.name,
-    description: entry.data.jobTitle
-  };
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": entry.data.name, "description": `Team member: ${entry.data.name}` }, { "default": async ($$result2) => renderTemplate` ${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })} ${maybeRenderHead()}<div class="site-container mx-auto px-4"> <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-0"> <!-- Profile Sidebar --> <div class="lg:col-span-1 relative"> <div class="absolute inset-0 bg-white border-l border-r border-black lg:block hidden"></div> <div class="lg:sticky lg:top-24"> <div class="relative lg:p-6"> <div class="flex flex-col lg:flex-col gap-6 lg:gap-4"> ${renderComponent($$result2, "MobileProfile", $$MobileProfile, { "entry": entry })} ${renderComponent($$result2, "DesktopProfile", $$DesktopProfile, { "entry": entry })} </div> </div> </div> </div> <!-- Main Content --> <div class="lg:col-span-2 py-base"> <article> ${renderComponent($$result2, "Content", Content, {})} </article> </div> </div> </div> ` })}`;
+  let slugArray = Astro2.params.slug;
+  if (!Array.isArray(slugArray)) {
+    slugArray = [slugArray];
+  }
+  const posts = await getCollection("team");
+  const slugString = slugArray.join("/");
+  const entry = posts.find((p) => p.id === slugString);
+  let Content, heroContent;
+  if (entry) {
+    ({ Content } = await renderEntry(entry));
+    heroContent = {
+      title: entry.data.name,
+      description: entry.data.jobTitle
+    };
+  }
+  return renderTemplate`${entry ? renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": entry.data.name, "description": `Team member: ${entry.data.name}` }, { "default": async ($$result2) => renderTemplate`${heroContent && renderTemplate`${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })}`}${maybeRenderHead()}<div class="site-container mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-0"><div class="lg:col-span-1 relative"><div class="absolute inset-0 bg-white border-l border-r border-black lg:block hidden"></div><div class="lg:sticky lg:top-24"><div class="relative lg:p-6"><div class="flex flex-col lg:flex-col gap-6 lg:gap-4">${renderComponent($$result2, "MobileProfile", $$MobileProfile, { "entry": entry })}${renderComponent($$result2, "DesktopProfile", $$DesktopProfile, { "entry": entry })}</div></div></div></div><!-- Main Content --><div class="lg:col-span-2 py-base"><article>${renderComponent($$result2, "Content", Content, {})}</article></div></div></div>` })}` : renderTemplate`<div>No se encontró un miembro del equipo.</div>`}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/team/[...slug].astro", void 0);
 
 const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/team/[...slug].astro";

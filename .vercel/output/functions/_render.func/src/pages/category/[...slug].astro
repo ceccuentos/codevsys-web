@@ -11,18 +11,36 @@ const allPosts = await getCollection('blog', ({ data }) => {
 });
 
 // Get categories that have at least one posts
-const activeCategories = categories.filter(category => 
+const activeCategories = categories.filter(category =>
     allPosts.some(post => post.data.categories?.includes(category.name))
 );
 
 // Generate paths only for categories with posts
 return activeCategories.map((category) => ({
-    params: { slug: category.slug },
+    params: { slug: [category.slug] }, // slug debe ser un array
     props: { category },
 }));
 }
 
-const { category } = Astro.props;
+// slugArray siempre será un array de strings
+let slugArray = Astro.params.slug;
+if (!Array.isArray(slugArray)) {
+  slugArray = [slugArray];
+}
+
+// slugString será el slug como string, útil para búsquedas
+const slugString = slugArray.join('/');
+
+// Buscar la categoría manualmente usando el slug como string
+const category = categories.find(cat => cat.slug === slugString);
+
+console.log('Valor calculado de category:', category);
+console.log('Valor Astro.props:', Astro.props);
+console.log('Valor de Astro.params:', Astro.params);
+
+if (!category) {
+  throw new Error("No se encontró la categoría para este slug.");
+}
 const currentPage = parseInt(Astro.url.searchParams.get('page') || '1');
 
 // Get posts for this category
@@ -33,7 +51,7 @@ return isPublished && hasCategory;
 });
 
 // Sort posts by date
-const sortedPosts = posts.sort((a, b) => 
+const sortedPosts = posts.sort((a, b) =>
 b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 
@@ -45,11 +63,11 @@ const end = start + blogSetting.postsPerPage;
 const paginatedPosts = sortedPosts.slice(start, end);
 ---
 
-<PaginatedBlogLayout 
+<PaginatedBlogLayout
     posts={paginatedPosts}
     currentPage={currentPage}
     totalPages={totalPages}
     baseUrl={`/category/${category.slug}`}
     title={category.name}
     subtitle={category.description}
-    currentCategory={category.name} /> 
+    currentCategory={category.name} />

@@ -1,9 +1,10 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_CkC9QQwS.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../../chunks/Layout_BJBcm7r5.mjs';
+import { a as $$Layout } from '../../chunks/Layout_DNILZkIK.mjs';
 import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
-import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_XDpgdDC5.mjs';
-import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_BugBildx.mjs';
+import { $ as $$FeatureDetails, a as $$Stats, s as statsLists } from '../../chunks/stats_7QCJMm69.mjs';
+import { $ as $$Subscription } from '../../chunks/Subscription_DigQO8mk.mjs';
+import { g as getFeatureBySlug, $ as $$Eyebrow } from '../../chunks/Eyebrow_BI2u-5qU.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$NercCip = createComponent(($$result, $$props, $$slots) => {
@@ -37,7 +38,22 @@ const $$NercCip = createComponent(($$result, $$props, $$slots) => {
       // }
     }
   };
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": title, "description": description, "image": "../src/assets/images/servicios/servicio-1.webp" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })} ${feature && renderTemplate`${renderComponent($$result2, "FeatureDetails", $$FeatureDetails, { "feature": feature })}`}${maybeRenderHead()}<div class="bg-background-light text-headline-light py-12"> <div class="max-w-6xl mx-auto px-4"> <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"> <div class="md:col-span-2"> <div class="mb-6 flex items-center gap-2"> ${renderComponent($$result2, "Eyebrow", $$Eyebrow, { "text": "Beneficios", "background": "base" })} </div> <div class="space-y-8"> ${beneficios.map((beneficio) => renderTemplate`<div class="text-2xl md:text-3xl font-normal leading-tight">${beneficio}</div>`)} </div> </div> <div class="flex justify-center md:justify-end"> <!-- Icono de ciberseguridad: candado SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="none" viewBox="0 0 48 48"> <rect x="10" y="20" width="28" height="20" rx="4" fill="none" stroke="#0f3c5c" stroke-width="2"></rect> <path d="M16 20v-5a8 8 0 1 1 16 0v5" stroke="#0f3c5c" stroke-width="2" fill="none"></path> <circle cx="24" cy="30" r="2.5" fill="none" stroke="#0f3c5c" stroke-width="2"></circle> <path d="M24 32.5V36" stroke="#0f3c5c" stroke-width="2"></path> </svg> </div> </div> </div> </div> ${renderComponent($$result2, "Stats", $$Stats, { "content": sideBySideStats, "background": "base", "padding": "base" })} ` })}`;
+  const styleGuideSection = {
+    eyebrow: "Seguridad Operacional",
+    headline: "Descarga la gu\xEDa del Plan de Recuperaci\xF3n ante Desastres",
+    description: "Prep\xE1rate ante incidentes cr\xEDticos. Descarga nuestra gu\xEDa basada en el est\xE1ndar NERC-CIP y fortalece tu resiliencia operativa.",
+    newsLetterForm: [
+      {
+        title: "Descarga la Gu\xEDa del Plan de Recuperaci\xF3n ante Desastres",
+        description: "Incluye evaluaci\xF3n de riesgos, protocolos de respuesta, respaldo de sistemas y simulacros bajo el marco NERC-CIP. Ideal para plantas el\xE9ctricas y OT.",
+        successTitle: "\xA1Descarga exitosa!",
+        successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas.",
+        buttonText: "Descargar ahora",
+        fileDownload: "Plan_Recuperacion_NERC_CIP.pdf"
+      }
+    ]
+  };
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": title, "description": description, "image": "../src/assets/images/servicios/servicio-1.webp" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })} ${feature && renderTemplate`${renderComponent($$result2, "FeatureDetails", $$FeatureDetails, { "feature": feature })}`}${maybeRenderHead()}<div class="bg-background-light text-headline-light py-12"> <div class="max-w-6xl mx-auto px-4"> <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"> <div class="md:col-span-2"> <div class="mb-6 flex items-center gap-2"> ${renderComponent($$result2, "Eyebrow", $$Eyebrow, { "text": "Beneficios", "background": "base" })} </div> <div class="space-y-8"> ${beneficios.map((beneficio) => renderTemplate`<div class="text-2xl md:text-3xl font-normal leading-tight">${beneficio}</div>`)} </div> </div> <div class="flex justify-center md:justify-end"> <!-- Icono de ciberseguridad: candado SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="none" viewBox="0 0 48 48"> <rect x="10" y="20" width="28" height="20" rx="4" fill="none" stroke="#0f3c5c" stroke-width="2"></rect> <path d="M16 20v-5a8 8 0 1 1 16 0v5" stroke="#0f3c5c" stroke-width="2" fill="none"></path> <circle cx="24" cy="30" r="2.5" fill="none" stroke="#0f3c5c" stroke-width="2"></circle> <path d="M24 32.5V36" stroke="#0f3c5c" stroke-width="2"></path> </svg> </div> </div> </div> </div> ${renderComponent($$result2, "Stats", $$Stats, { "content": sideBySideStats, "background": "base", "padding": "base" })} ${renderComponent($$result2, "Subscription", $$Subscription, { "content": styleGuideSection, "imagePosition": "right", "background": "light", "padding": "base" })} ` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/servicios/nerc-cip.astro", void 0);
 
 const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/servicios/nerc-cip.astro";
