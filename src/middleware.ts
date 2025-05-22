@@ -1,14 +1,12 @@
 import { defineMiddleware } from "astro/middleware";
 
-
-// Direccionamiento a aulasx.codevsys.cl
 export const onRequest = defineMiddleware(async (context, next) => {
-  const url = context.url.pathname;
+  const { pathname, search } = context.url;
 
-  if (url.startsWith("/aulavirtual")) {
-    const redirectTo = `https://aulasx.codevsys.cl${url.replace("/aulavirtual", "")}`;
-    return Response.redirect(redirectTo, 301);
-
+  if (pathname.startsWith("/aulavirtual")) {
+    const newPath = pathname.replace("/aulavirtual", "");
+    const target = `https://aulasx.codevsys.cl${newPath}${search}`;
+    return Response.redirect(target, 301);
   }
 
   return next();
