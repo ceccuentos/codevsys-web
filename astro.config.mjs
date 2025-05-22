@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
 
 export default defineConfig({
+  middleware: true,
   output: 'server',
   adapter: vercel(),
   // devToolbar: false,
