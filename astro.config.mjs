@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-//import vercel from '@astrojs/vercel/serverless';
-import vercel from '@astrojs/vercel/edge';
+import vercel from '@astrojs/vercel/serverless';
+//import vercel from '@astrojs/vercel/edge';
 import sitemap from '@astrojs/sitemap';
 
 // Get the site URL from environment variable or use a default for local development
