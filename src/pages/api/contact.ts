@@ -22,7 +22,7 @@ export const POST: APIRoute = async ({ request }) => {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   // 1. Verifica el captcha
-  /*
+
   // Descomentar para producción
   const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request }) => {
   if (!verifyData.success) {
     return new Response(JSON.stringify({ success: false, error: 'Captcha inválido' }), { status: 400 });
   }
-  */
+
 
   // 2. Si el captcha es válido, envía el correo
   const transporter = nodemailer.createTransport({
