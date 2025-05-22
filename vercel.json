@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "/aulavirtual/:path*",
+        "destination": "https://aulasx.codevsys.cl/:path*",
+        "permanent": true
+      }
+    ]
+  }
