@@ -22,6 +22,9 @@ const blog = defineCollection({
                     image: z.string().optional(),
                 })
                 .optional(),
+            // Campos personalizados para la suscripción
+            showSubscription: z.boolean().optional(),
+            subscriptionContent: z.any().optional(),
         }),
 });
 

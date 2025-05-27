@@ -9,6 +9,8 @@ categories: ["Ciberseguridad", "NERC-CIP"]
 seo:
   title: "Gestión de riesgos en ciberseguridad: protege tus activos digitales"
   description: "Aprende a gestionar riesgos en ciberseguridad en solo 3 pasos. Protege eficazmente tus activos digitales con esta guía práctica y sencilla."
+
+showSubscription: false
 ---
 
 ¿Sabías que el cibercrimen mueve casi el 0.8% del PIB Mundial?

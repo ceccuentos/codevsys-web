@@ -4,6 +4,24 @@ import Layout from '@layouts/Layout.astro';
 import CategoryPill from '@components/ui/CategoryPill.astro';
 import Date from '@components/ui/Date.astro';
 import { Image } from 'astro:assets';
+import Subscription from '../../components/sections/Subscription.astro';
+
+// Objeto por defecto para la sección de suscripción
+const styleGuideSection = {
+  eyebrow: "Síguenos",
+  headline: "Suscríbete al Newsletter",
+  description: "Mantente informado sobre ciberseguridad, NERC-CIP, IA generativa, innovación tecnológica y mejores prácticas para industrias críticas.",
+  newsLetterForm: [
+    {
+      title: "¡Recibe nuestras actualizaciones periódicas!",
+      description: "Entérate antes que nadie sobre nuevas regulaciones, casos de uso de IA generativa, herramientas de automatización y tendencias tecnológicas clave para tu empresa.",
+      successTitle: "¡Suscripción exitosa!",
+      successMessage: "Gracias por unirte. Revisa tu bandeja de entrada para comenzar a recibir nuestros contenidos exclusivos.",
+      buttonText: "Suscribirme",
+      fileDownload: ""
+    }
+  ],
+};
 
 export async function getStaticPaths() {
     const posts = await getCollection('blog');
@@ -51,6 +69,28 @@ else if (!seoImage && post.data.featuredImage) {
     const siteUrl = import.meta.env.SITE || 'https://www.codevsys.cl';
     seoImage = new URL(post.data.featuredImage.src, siteUrl).toString();
 }
+
+// Lógica para la sección de suscripción
+// Tipado explícito para evitar errores de lint
+interface BlogFrontmatter {
+  title: string;
+  excerpt: string;
+  featuredImage?: any;
+  publishDate: Date;
+  publish?: boolean;
+  categories: string[];
+  seo?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  showSubscription?: boolean;
+  subscriptionContent?: any;
+}
+
+const typedPost = post as typeof post & { data: BlogFrontmatter };
+const showSubscription = !!typedPost.data.showSubscription;
+const subscriptionContent = typedPost.data.subscriptionContent || styleGuideSection;
 ---
 
 <Layout title={seoTitle} description={seoDescription} image={seoImage}>
@@ -107,4 +147,13 @@ else if (!seoImage && post.data.featuredImage) {
             <Content />
         </div>
     </article>
+
+    {showSubscription && (
+      <Subscription
+        content={subscriptionContent}
+        imagePosition="right"
+        background="light"
+        padding="base"
+      />
+    )}
 </Layout>

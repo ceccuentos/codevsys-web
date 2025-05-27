@@ -15,26 +15,26 @@ export const categories: Category[] = [
     slug: 'web-development',
     description: 'Tips and insights for better web development'
   },
-  {
-    name: 'Design',
-    slug: 'design',
-    description: 'Exploring design and user experience'
-  },
-  {
-    name: 'Accessibility',
-    slug: 'accessibility',
-    description: 'Exploring accessibility and user experience'
-  },
-  {
-    name: 'Theme Usage',
-    slug: 'theme-usage',
-    description: 'Learn how to use the theme'
-  },
-  {
-    name: 'Astro JS',
-    slug: 'astro-js',
-    description: 'Everything about Astro JS framework and development'
-  },
+  // {
+  //   name: 'Design',
+  //   slug: 'design',
+  //   description: 'Exploring design and user experience'
+  // },
+  // {
+  //   name: 'Accessibility',
+  //   slug: 'accessibility',
+  //   description: 'Exploring accessibility and user experience'
+  // },
+  // {
+  //   name: 'Theme Usage',
+  //   slug: 'theme-usage',
+  //   description: 'Learn how to use the theme'
+  // },
+  // {
+  //   name: 'Astro JS',
+  //   slug: 'astro-js',
+  //   description: 'Everything about Astro JS framework and development'
+  // },
   {
     name: 'SEO',
     slug: 'seo',

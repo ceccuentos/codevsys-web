@@ -1,4 +1,5 @@
 ---
+
 title: "¿Qué es NERC-CIP?"
 excerpt: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
 featuredImage: "./images/ciberseguridad_NERC-CIP.png"
@@ -9,6 +10,20 @@ categories: ["Ciberseguridad", "NERC-CIP"]
 seo:
   title: "Qué es Nerc-CIP"
   description: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
+
+showSubscription: true
+subscriptionContent:
+  eyebrow: "Seguridad Operacional"
+  headline: "Descarga la guía de Implementación NERC-CIP"
+  description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones especícas y mejores prácticas"
+  newsLetterForm:
+    - title: "¡Descarga la guía de Implementación NERC-CIP!"
+      description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones especícas y mejores prácticas"
+      successTitle: "¡Descarga exitosa!"
+      successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas."
+      buttonText: "Descargar ahora"
+      fileDownload: "Guia_Implementacion_NERC_CIP.pdf"
+
 ---
 
 ## La Base: El Estándar de Ciberseguridad para el Sector Eléctrico

@@ -9,6 +9,7 @@ categories: ["Ciberseguridad"]
 seo:
   title: "Impacto de las Nuevas Leyes de Ciberseguridad y Datos Personales en Empresas Chilenas"
   description: "Conoce cómo las leyes 21.459, 21.663 y 21.719 redefinen la ciberseguridad y la protección de datos en el ecosistema empresarial chileno."
+showSubscription: true
 ---
 
 ## Un Nuevo Paisaje Legal Digital en Chile: El Desafío para las Empresas en Ciberseguridad y Protección de Datos
