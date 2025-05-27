@@ -87,12 +87,13 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 		<Footer footerCta={footerCta} />
 		<!-- <ThemeSwitcher /> -->
 
-		<script is:inline>
-			import AOS from 'aos';
-			AOS.init({
-				duration: 800,
-				once: true,
-			});
-		</script>
+		<script>
+  import AOS from 'aos';
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 40,
+  });
+</script>
 	</body>
 </html>
