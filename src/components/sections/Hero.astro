@@ -26,17 +26,16 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
 <section class="header-offset relative">
     {content.backgroundImage && (
         <div class="absolute inset-0 left-0 top-0 w-full h-full overflow-hidden">
-            <Image
-                src={content.backgroundImage}
+            <img
+                src="/src/assets/images/home/default-hero-codevsys-1200w.webp"
+                srcset="/src/assets/images/home/default-hero-codevsys-600w.webp 600w, /src/assets/images/home/default-hero-codevsys-1200w.webp 1200w, /src/assets/images/home/default-hero-codevsys-1920w.webp 1920w"
+                sizes="100vw"
                 alt=""
-                width={1920}
-                height={1080}
+                width="1920"
+                height="1080"
                 class="w-full h-full object-cover"
-                quality={70}
-                format="webp"
                 loading="eager"
                 decoding="async"
-                sizes="(max-width: 768px) 100vw, 1920px"
             />
             <div
                 class="hero-background absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"
@@ -46,7 +45,7 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
     )}
 
     <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center">
-        <h1 class="text-white text-balance" data-aos="fade-up">{content.title}</h1>
+        <h1 class="text-white text-balance text-4xl md:text-5xl font-bold" data-aos="fade-up">{content.title}</h1>
         <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">{content.description}</p>
         {content.buttons && content.buttons.length > 0 && (
             <div class="flex flex-wrap gap-4 mt-8" data-aos="fade-up">
