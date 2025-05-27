@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 //import logo from '../assets/astro.svg';
-import logo from '../assets/codevsys.svg';
-//import logo from '../assets/Codevsys-sin-fondo.png';
+//import logo from '../assets/codevsys.svg';
+import logo from '../assets/Codevsys-sin-fondo.png';
 interface Props {
     variant?: 'header' | 'footer' | 'dark';
 }
@@ -25,7 +25,8 @@ const getLogoClass = () => {
 ---
 
 <a href="/"
-    class:list={['logo uppercase font-logo transition-colors duration-200 font-light', getLogoClass()]}
+    class:list={["logo uppercase font-logo transition-colors duration-200 font-light", getLogoClass()]}
+    style={variant === 'footer' ? 'color: #5EE6FF' : variant === 'header' ? 'color: #0A324B' : ''}
     class="flex items-center space-x-3">
     {
         // If image is the only element in this link, its alt attribute should be a textual representation.
@@ -34,5 +35,6 @@ const getLogoClass = () => {
     }
     <Image src={logo} alt="" class="hidden" />
     <!-- <Image src={logo} alt="" class="h-15 w-15" /> -->
-    <span class="font-bold">Codevsys</span>
+    <!-- <span class="font-bold">Codevsys</span> -->
+    <span class="font-extrabold text-xl tracking-wider drop-shadow">Codevsys</span>
 </a>

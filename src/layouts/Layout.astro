@@ -40,13 +40,14 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link rel="preload" as="image" href="/src/assets/images/home/default-hero-codevsys.webp" />
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0067H7QVM"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'G-J0067H7QVM');
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){window.dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-J0067H7QVM');
 		</script>
 		<meta name="viewport" content="width=device-width" />
 		<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
@@ -86,7 +87,7 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 		<Footer footerCta={footerCta} />
 		<!-- <ThemeSwitcher /> -->
 
-		<script>
+		<script is:inline>
 			import AOS from 'aos';
 			AOS.init({
 				duration: 800,
