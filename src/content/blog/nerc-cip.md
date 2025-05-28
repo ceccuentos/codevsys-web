@@ -15,10 +15,12 @@ showSubscription: true
 subscriptionContent:
   eyebrow: "Seguridad Operacional"
   headline: "Descarga la guía de Implementación NERC-CIP"
-  description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones especícas y mejores prácticas"
+  description: "Recomendaciones específicas y mejores prácticas."
+  image: "/images/guia-practica-NERC-CIP.png"
+  imageAlt: "Portada Guía NERC-CIP"
   newsLetterForm:
     - title: "¡Descarga la guía de Implementación NERC-CIP!"
-      description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones especícas y mejores prácticas"
+      description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones específicas y mejores prácticas"
       successTitle: "¡Descarga exitosa!"
       successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas."
       buttonText: "Descargar ahora"

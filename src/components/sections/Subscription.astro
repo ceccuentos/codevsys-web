@@ -25,6 +25,8 @@ interface Content {
         fileDownload?: string;
         buttonText: string;
     }[];
+    image?: string;
+    imageAlt?: string;
 }
 
 export interface Props {
@@ -74,22 +76,33 @@ const textColor = getTextColor(background);
             {/* Content Side */}
             <div class:list={[textColor]}>
                 {eyebrow && <Eyebrow text={eyebrow} background={background} />}
-                <h2 class={textColor} data-aos="fade-up">{headline}</h2>
-                {
-                    subheadline && (
-                        <h3 class:list={['mt-4 text-h5', textColor]} data-aos="fade-up">
-                            {subheadline}
-                        </h3>
-                    )
-                }
-                {
-                    description && (
-                        <p class:list={['mt-6 text-base opacity-90', textColor]} data-aos="fade-up">
-                            {description}
-                        </p>
-                    )
-                }
-
+                <h2 class={textColor + " mb-2"} data-aos="fade-up">{headline}</h2>
+                {content.image && description && (
+                  <div class="flex items-start gap-4 mb-4">
+                    <Image
+                      src={content.image}
+                      alt={content.imageAlt || ''}
+                      class="w-full max-w-[180px] rounded-lg shadow border"
+                      width={180}
+                      height={180}
+                      fit="cover"
+                    />
+                    <p class="text-base opacity-90 mt-0" data-aos="fade-up">{description}</p>
+                  </div>
+                )}
+                {content.image && !description && (
+                  <Image
+                    src={content.image}
+                    alt={content.imageAlt || ''}
+                    class="mb-4 w-full max-w-[180px] rounded-lg shadow border"
+                    width={180}
+                    height={180}
+                    fit="cover"
+                  />
+                )}
+                {!content.image && description && (
+                  <p class="mt-2 text-base opacity-90" data-aos="fade-up">{description}</p>
+                )}
                 {
                     buttons.length > 0 && (
                         <div class="flex flex-wrap gap-4 mt-8" data-aos="fade-up">
