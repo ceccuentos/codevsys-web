@@ -88,15 +88,13 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 		{pageImage && <meta property="twitter:image" content={new URL(pageImage, siteConfig.siteUrl).toString()} />}
 	</head>
 	<body data-theme={theme}>
+
 	<!-- Google Tag Manager (noscript) -->
-	<!-- <noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSHQGF5"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript> -->
-
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSHQGFS"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSHQGFS"
+		height="0" width="0" style="display:none;visibility:hidden">
+		</iframe>
+	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 		<Header />
