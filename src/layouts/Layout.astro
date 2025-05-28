@@ -41,13 +41,22 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 	<head>
 		<meta charset="UTF-8" />
 		<!-- Google Tag Manager -->
-		<script is:raw>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		<!-- <script is:raw>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 			})(window,document,'script','dataLayer','GTM-WHSHQGFS');
-		</script>
+		</script> -->
 		<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager 2-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WHSHQGFS');</script>
+	<!-- End Google Tag Manager 2-->
+
 		<link rel="preload" as="image" href="/images/home/default-hero-codevsys-600w.webp" imagesrcset="/images/home/default-hero-codevsys-600w.webp 600w, /images/home/default-hero-codevsys-1200w.webp 1200w, /images/home/default-hero-codevsys-1920w.webp 1920w" imagesizes="100vw" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon-codevsys.png" />
@@ -78,13 +87,10 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 	</head>
 
 	<body data-theme={theme}>
-	<!-- Google Tag Manager v (noscript) -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSHQGFS"
-		height="0" width="0" style="display:none;visibility:hidden">
-		</iframe>
-	</noscript>
-	<!-- End Google Tag Manager v (noscript) -->
+<!-- Google Tag Manager x(noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSHQGFS"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager x(noscript) -->
 
 		<Header />
 		<slot />
