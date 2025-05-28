@@ -52,6 +52,23 @@ const {
   <div id="newsletter-message" class="mt-4 text-center text-base"></div>
 </form>
 
+<script is:inline>
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      const fileDownload = form.querySelector('input[name="fileDownload"]')?.value;
+      const eventType = fileDownload ? 'download_brochure' : 'newsletter_signup';
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: eventType,
+        formType: eventType,
+        fileDownload: fileDownload || null
+      });
+    });
+  }
+</script>
+
+
 <!-- Modal de éxito -->
 <div id="newsletter-success-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:50; align-items:center; justify-content:center;">
   <div style="background:white; padding:2rem 1.5rem; border-radius:0.75rem; max-width:90vw; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
