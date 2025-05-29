@@ -11,6 +11,19 @@ seo:
   description: "Aprende a gestionar riesgos en ciberseguridad en solo 3 pasos. Protege eficazmente tus activos digitales con esta guía práctica y sencilla."
 
 showSubscription: false
+jsonLdString: >
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Gestión de riesgos en ciberseguridad: protege tus activos digitales, cumple NERC-CIP y la ley de ciberseguridad en 3 pasos",
+    "description": "Aprende cómo implementar una gestión de riesgos efectiva en ciberseguridad para proteger tus activos digitales, cumplir con el estándar NERC-CIP y la nueva ley de ciberseguridad en Chile. Descubre los tres pasos clave para fortalecer la resiliencia y el cumplimiento normativo de tu empresa frente a amenazas y ataques en el entorno digital actual.",
+    "datePublished": "2025-03-19",
+    "author": {
+      "@type": "Person",
+      "name": "Cristian E. Contreras Cabrera",
+      "url": "https://www.ceccuentos.com"
+    }
+  }
 ---
 
 ¿Sabías que el cibercrimen mueve casi el 0.8% del PIB Mundial?

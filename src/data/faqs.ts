@@ -108,5 +108,35 @@ export const faqLists: Record<string, FaqList> = {
                 answer: "Un chatbot generativo entiende contexto, aprende con ejemplos y puede interactuar de forma natural, no se limita a respuestas predefinidas."
             }
         ]
+    },
+    inicio_codevsys_faq: {
+        id: "inicio_codevsys_faq",
+        faqs: [
+          {
+            question: "¿Qué servicios ofrece Codevsys?",
+            answer:
+              "Ofrecemos consultoría en ciberseguridad basada en la Ley de Ciberseguridad Chilena, cumplimiento NERC-CIP para empresas eléctricas y soluciones con inteligencia artificial generativa."
+          },
+          {
+            question: "¿Dónde opera Codevsys?",
+            answer:
+              "Codevsys tiene sede en Santiago de Chile y presta servicios a nivel nacional, incluyendo atención remota y proyectos en sectores regulados y estratégicos."
+          },
+          {
+            question: "¿Qué tipo de empresas pueden trabajar con Codevsys?",
+            answer:
+              "Trabajamos principalmente con medianas y grandes empresas de sectores como energía, servicios financieros, tecnología y administración pública."
+          },
+          {
+            question: "¿Qué diferencia a Codevsys de otras consultoras?",
+            answer:
+              "Nos enfocamos en normativas locales como la Ley Marco de Ciberseguridad y el estándar NERC-CIP, combinadas con automatización e inteligencia artificial aplicada a procesos empresariales."
+          },
+          {
+            question: "¿Cómo puedo contactar a Codevsys?",
+            answer:
+              "Puedes escribirnos a través de nuestro formulario web, agendar una reunión en línea o contactarnos por correo a contacto@codevsys.cl."
+          }
+        ]
     }
-};
+}

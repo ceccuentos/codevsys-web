@@ -26,6 +26,19 @@ subscriptionContent:
       buttonText: "Descargar ahora"
       fileDownload: "Guia_Implementacion_NERC_CIP.pdf"
 
+jsonLdString: >
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "¿Qué es NERC-CIP? El estándar de ciberseguridad para el sector eléctrico chileno",
+    "description": "Conoce el estándar NERC-CIP y cómo su implementación fortalece la ciberseguridad, el cumplimiento normativo y las mejores prácticas en empresas del sector eléctrico en Chile. Descubre recomendaciones clave y recursos para asegurar la continuidad operacional y la protección de infraestructuras críticas.",
+    "datePublished": "2024-12-23",
+    "author": {
+      "@type": "Person",
+      "name": "Cristian E. Contreras Cabrera",
+      "url": "https://www.ceccuentos.com"
+    }
+  }
 ---
 
 ## La Base: El Estándar de Ciberseguridad para el Sector Eléctrico

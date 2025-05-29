@@ -93,7 +93,7 @@ const showSubscription = !!typedPost.data.showSubscription;
 const subscriptionContent = typedPost.data.subscriptionContent || styleGuideSection;
 ---
 
-<Layout title={seoTitle} description={seoDescription} image={seoImage}>
+<Layout title={seoTitle} description={seoDescription} image={seoImage} jsonLdString={post.data.jsonLdString}>
     <div class="w-full h-120 absolute top-0 left-0 z-0 overflow-hidden border-b border-black">
         {
             post.data.featuredImage && (

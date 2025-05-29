@@ -25,6 +25,8 @@ const blog = defineCollection({
             // Campos personalizados para la suscripción
             showSubscription: z.boolean().optional(),
             subscriptionContent: z.any().optional(),
+            // Campo para Rich JSON-LD
+            jsonLdString: z.string().optional(),
         }),
 });
 
