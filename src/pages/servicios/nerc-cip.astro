@@ -25,6 +25,8 @@ const faqSchema = {
   }))
 };
 
+const jsonLdString = JSON.stringify(faqSchema, null, 2); // Bien indentado para legibilidad
+
 
 const title = 'NERC CIP';
 const description = 'Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.';
@@ -85,11 +87,7 @@ const faqsSection = {
 
 ---
 
-<Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp">
-    <!-- Rich Snippet FAQ Structured Data -->
-    <script type="application/ld+json" is:raw>
-  {JSON.stringify(faqSchema)}
-</script>
+<Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp" jsonLdString={jsonLdString}>
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}
 

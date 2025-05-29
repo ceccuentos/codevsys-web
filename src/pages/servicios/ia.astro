@@ -23,6 +23,9 @@ const faqSchema = {
     }
   }))
 };
+
+const jsonLdString = JSON.stringify(faqSchema, null, 2); // Bien indentado para legibilidad
+
 const heroContent = {
     title: "Servicios - Agentes de IA Generativa", //"Contact Us",
     description: ""
@@ -61,11 +64,9 @@ const faqsSection = {
 
 ---
 
-<Layout title="Servicios - Agentes de IA Generativa" description="Descubre cómo la inteligencia artificial generativa puede transformar la eficiencia y creatividad de tu empresa con soluciones personalizadas.">
-    <!-- Rich Snippet FAQ Structured Data -->
-    <script type="application/ld+json" is:raw>
-  {JSON.stringify(faqSchema)}
-</script>
+<Layout title="Servicios - Agentes de IA Generativa"
+description="Soluciones con IA generativa para potenciar la eficiencia y automatización en tu organización."
+jsonLdString={jsonLdString}>
 
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}

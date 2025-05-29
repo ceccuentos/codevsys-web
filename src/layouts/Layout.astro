@@ -28,17 +28,17 @@ interface Props {
 	jsonLdString?: string;
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Funciona?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí." }
-    }
-  ]
-};
+// const faqSchema = {
+//   "@context": "https://schema.org",
+//   "@type": "FAQPage",
+//   "mainEntity": [
+//     {
+//       "@type": "Question",
+//       "name": "¿Funciona?",
+//       "acceptedAnswer": { "@type": "Answer", "text": "Sí." }
+//     }
+//   ]
+// };
 
 const { title, description, image, footerCta, canonicalUrl, jsonLdString } = Astro.props;
 
@@ -48,9 +48,7 @@ const pageImage = image || '';
 const canonicalPath = canonicalUrl || Astro.url.pathname;
 const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 
-const jsonLd = jsonLdString || JSON.stringify(faqSchema, null, 2);
-
-console.log("JSON LD STRING LAYOUT:", jsonLd);
+//const jsonLd = jsonLdString || "" //JSON.stringify(faqSchema, null, 2);
 
 ---
 
@@ -68,7 +66,9 @@ console.log("JSON LD STRING LAYOUT:", jsonLd);
 		</script>
 		<!-- End Google Tag Manager -->
 
-		<!-- {jsonLd && <script type="application/ld+json" set:html={jsonLd}></script>} -->
+		<!-- Rich Snippet (JSON-LD) -->
+		{jsonLdString && <script type="application/ld+json" set:html={jsonLdString}></script>}
+		<!-- End Rich Snippet (JSON-LD) -->
 
 		<link rel="preload" as="image" href="/images/home/default-hero-codevsys-600w.webp" imagesrcset="/images/home/default-hero-codevsys-600w.webp 600w, /images/home/default-hero-codevsys-1200w.webp 1200w, /images/home/default-hero-codevsys-1920w.webp 1920w" imagesizes="100vw" />
 		<meta name="viewport" content="width=device-width" />
