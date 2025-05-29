@@ -9,8 +9,9 @@ import Eyebrow from '@components/ui/Eyebrow.astro';
 import { faqLists } from "@data/faqs";
 import Faqs from '@components/sections/Faqs.astro';
 
+
 // --- Rich Snippet FAQ Schema ---
-const serviceFaqs = faqLists.ley_marco_ciberseguridad?.faqs || [];
+const serviceFaqs = faqLists.ley_ciberseguridad?.faqs || [];
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -23,6 +24,19 @@ const faqSchema = {
     }
   }))
 };
+
+// const faqSchema = {
+//   "@context": "https://schema.org",
+//   "@type": "FAQPage",
+//   "mainEntity": [
+//     {
+//       "@type": "Question",
+//       "name": "¿Funciona?",
+//       "acceptedAnswer": { "@type": "Answer", "text": "Sí." }
+//     }
+//   ]
+// };
+
 
 const heroContent = {
     title: "Servicios - Ley de Ciberseguridad (Ley 21663)", //"Contact Us",
@@ -59,11 +73,27 @@ const faqsSection = {
     faqs: faqLists.ley_ciberseguridad.faqs
 }
 
+// console.log("FAQ SCHEMA:", faqSchema);
+// console.log("serviceFaqs:", serviceFaqs);
+
+//const jsonLdString = JSON.stringify(faqSchema);
+const jsonLdString = JSON.stringify(faqSchema, null, 2); // Bien indentado para legibilidad
+console.log("JSON LD STRING:", jsonLdString);
+
 ---
 
-<Layout title="Servicios - Ley de Ciberseguridad (Ley 21663)" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad Ley 21663, reduciendo riesgos y garantizando el cumplimiento normativo.">
-      <!-- Rich Snippet FAQ Structured Data -->
-      <script type="application/ld+json" is:inline>{JSON.stringify(faqSchema)}</script>
+<Layout title="Servicios - Ley de Ciberseguridad (Ley 21663)" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad Ley 21663, reduciendo riesgos y garantizando el cumplimiento normativo." jsonLdString={jsonLdString}>
+      <!-- Rich Snippet FAQ Structured Data x -->
+      <!-- {jsonLdString} -->
+
+<!-- <script type="application/ld+json" is:inline> -->
+<!-- <script type="application/ld+json" is:raw>{`${JSON.stringify(faqSchema)}`}</script> -->
+
+
+
+      <!-- <script type="application/ld+json" is:raw>
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Prueba FAQ?","acceptedAnswer":{"@type":"Answer","text":"Esto es una prueba."}}]}
+</script> -->
 
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}

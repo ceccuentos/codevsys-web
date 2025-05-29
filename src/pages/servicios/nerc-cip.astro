@@ -87,7 +87,9 @@ const faqsSection = {
 
 <Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp">
     <!-- Rich Snippet FAQ Structured Data -->
-    <script type="application/ld+json" is:inline>{JSON.stringify(faqSchema)}</script>
+    <script type="application/ld+json" is:raw>
+  {JSON.stringify(faqSchema)}
+</script>
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}
 
