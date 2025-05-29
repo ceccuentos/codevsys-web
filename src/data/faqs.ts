@@ -33,5 +33,80 @@ export const faqLists: Record<string, FaqList> = {
                 answer: "We aim to update Titan Core regularly to keep it compatible with the latest Astro JS releases and web standards. Major updates are released quarterly, with smaller fixes and improvements added more frequently. You can star our GitHub repository to stay informed about updates."
             }
         ]
+    },
+    nerc_cip: {
+        id: 'nerc_cip',
+        faqs: [
+            {
+                question: "¿Qué es el estándar NERC-CIP?",
+                answer: "Es un conjunto de normas de ciberseguridad que regulan la protección de sistemas críticos en el sector eléctrico de América del Norte y adaptado en Chile."
+            },
+            {
+                question: "¿Cuáles son los requisitos principales del NERC-CIP?",
+                answer: "Inventario de activos críticos, control de acceso lógico y físico, gestión de incidentes y continuidad operativa, entre otros."
+            },
+            {
+                question: "¿Cómo afecta NERC-CIP a las empresas eléctricas chilenas?",
+                answer: "Las obliga a implementar medidas técnicas y administrativas para proteger los activos digitales que controlan la operación eléctrica nacional."
+            },
+            {
+                question: "¿Es obligatorio cumplir con NERC-CIP en Chile?",
+                answer: "No es obligatorio por ley, pero se recomienda como marco de referencia para cumplir con las exigencias de ciberseguridad en energía crítica."
+            },
+            {
+                question: "¿Qué servicios ofrece Codevsys para NERC-CIP?",
+                answer: "Realizamos assessment normativo, plan de cumplimiento, capacitación y acompañamiento técnico para lograr alineación con el estándar."
+            }
+        ]
+    },
+    ley_ciberseguridad: {
+        id: 'ley_ciberseguridad',
+        faqs: [
+            {
+                question: "¿Qué es la Ley Marco de Ciberseguridad en Chile?",
+                answer: "Es una legislación chilena que establece medidas obligatorias para proteger infraestructuras críticas y fortalecer la ciberseguridad nacional."
+            },
+            {
+                question: "¿A qué empresas afecta la nueva ley de ciberseguridad?",
+                answer: "Principalmente a empresas que operan infraestructuras críticas, organismos públicos, y proveedores de servicios esenciales y estratégicos."
+            },
+            {
+                question: "¿Cómo puede mi empresa cumplir con esta ley?",
+                answer: "Mediante la evaluación de riesgos, la implementación de controles técnicos y administrativos, y la definición de planes de respuesta a incidentes."
+            },
+            {
+                question: "¿Qué sanciones contempla la ley por incumplimiento?",
+                answer: "Sanciones administrativas y económicas, que pueden incluir multas y revocación de autorizaciones si no se cumplen las exigencias del CSIRT Nacional."
+            },
+            {
+                question: "¿Cómo ayuda Codevsys en el cumplimiento de esta ley?",
+                answer: "Ofrecemos consultoría experta en levantamiento de brechas, diseño de políticas, y entrenamiento para cumplir con los requisitos legales vigentes."
+            }
+        ]
+    },
+    ia: {
+        id: 'ia',
+        faqs: [
+            {
+                question: "¿Qué es la inteligencia artificial generativa?",
+                answer: "Es un tipo de IA que genera contenido nuevo (texto, imágenes, código) a partir de datos y ejemplos existentes, usando modelos como GPT o DALL·E."
+            },
+            {
+                question: "¿Qué aplicaciones prácticas tiene en empresas?",
+                answer: "Automatización de tareas, generación de reportes, procesamiento de documentos legales, atención a clientes, análisis de datos, entre otros."
+            },
+            {
+                question: "¿Qué tecnologías usa Codevsys en este servicio?",
+                answer: "Usamos herramientas como LlamaIndex, RAGs, modelos de lenguaje y bases vectoriales para crear agentes y flujos inteligentes personalizados."
+            },
+            {
+                question: "¿Cómo saber si mi empresa puede aplicar IA generativa?",
+                answer: "Analizamos tus flujos operativos, documentos, y necesidades de automatización para proponer soluciones de IA adaptadas a tu contexto."
+            },
+            {
+                question: "¿Qué diferencia hay entre un chatbot tradicional y uno con IA generativa?",
+                answer: "Un chatbot generativo entiende contexto, aprende con ejemplos y puede interactuar de forma natural, no se limita a respuestas predefinidas."
+            }
+        ]
     }
 };

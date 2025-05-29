@@ -7,6 +7,24 @@ import { getFeatureBySlug } from "@data/features";
 import Stats from '@components/sections/Stats.astro';
 import { statsLists } from '@data/stats';
 import Eyebrow from '@components/ui/Eyebrow.astro';
+import { faqLists } from "@data/faqs";
+import Faqs from '@components/sections/Faqs.astro';
+
+// --- Rich Snippet FAQ Schema ---
+const serviceFaqs = faqLists.nerc_cip?.faqs || [];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": serviceFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+
 
 const title = 'NERC CIP';
 const description = 'Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.';
@@ -58,9 +76,18 @@ const styleGuideSection = {
   ],
 }
 
+const faqsSection = {
+    eyebrow: "Preguntas frecuentes",
+    title: 'Estándar de NERC-CIP Adaptación Chilena',
+    description: 'Encuentra las respuestas a las preguntas más frecuentes sobre nuestros servicios.',
+    faqs: faqLists.nerc_cip.faqs
+}
+
 ---
 
 <Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp">
+    <!-- Rich Snippet FAQ Structured Data -->
+    <script type="application/ld+json" is:inline>{JSON.stringify(faqSchema)}</script>
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}
 
@@ -94,5 +121,6 @@ const styleGuideSection = {
     </div>
 
     <Stats content={sideBySideStats} background='base' padding="base"/>
-    <Subscription content={styleGuideSection} imagePosition="right" background="light" padding="base"  />
+    <Faqs content={faqsSection} background='light' padding="base"/>
+    <Subscription content={styleGuideSection} imagePosition="right" background="base" padding="base"  />
 </Layout>

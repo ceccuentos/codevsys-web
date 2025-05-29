@@ -6,9 +6,25 @@ import { getFeatureBySlug } from "@data/features";
 import Stats from '@components/sections/Stats.astro';
 import { statsLists } from '@data/stats';
 import Eyebrow from '@components/ui/Eyebrow.astro';
+import { faqLists } from "@data/faqs";
+import Faqs from '@components/sections/Faqs.astro';
 
+// --- Rich Snippet FAQ Schema ---
+const serviceFaqs = faqLists.ia?.faqs || [];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": serviceFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 const heroContent = {
-    title: "Servicios - IA", //"Contact Us",
+    title: "Servicios - Agentes de IA Generativa", //"Contact Us",
     description: ""
 }
 
@@ -36,9 +52,19 @@ const sideBySideStats = {
     }
 };
 
+const faqsSection = {
+    eyebrow: "Preguntas frecuentes",
+    title: 'Agentes de IA',
+    description: 'Encuentra las respuestas a las preguntas más frecuentes sobre nuestros servicios.',
+    faqs: faqLists.ia.faqs
+}
+
 ---
 
-<Layout title="Contáctanos" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.">
+<Layout title="Servicios - Agentes de IA Generativa" description="Descubre cómo la inteligencia artificial generativa puede transformar la eficiencia y creatividad de tu empresa con soluciones personalizadas.">
+    <!-- Rich Snippet FAQ Structured Data -->
+    <script type="application/ld+json" is:inline>{JSON.stringify(faqSchema)}</script>
+
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}
 
@@ -92,4 +118,5 @@ const sideBySideStats = {
     </div>
 
     <Stats content={sideBySideStats} background='base' padding="base"/>
+    <Faqs content={faqsSection} background='light' padding="base"/>
 </Layout>

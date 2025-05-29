@@ -11,7 +11,20 @@ export async function getStaticPaths() {
     }));
 }
 
-const { entry } = Astro.props;
+let slugParam = Astro.params.slug;
+if (Array.isArray(slugParam)) {
+  slugParam = slugParam.join('/');
+}
+
+// Encuentra el post correspondiente
+const entrys = await getCollection('legal');
+const entry = entrys.find((p) => p.id === slugParam);
+
+
+//const { entry } = Astro.props;
+if (!entry) {
+  throw new Error("La página legal solicitada no existe. Verifica el slug en la URL o el nombre del archivo Markdown.");
+}
 const { Content } = await render(entry);
 
 // Use SEO data from frontmatter if available, fallback to regular entry data

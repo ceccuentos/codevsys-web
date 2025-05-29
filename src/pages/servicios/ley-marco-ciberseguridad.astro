@@ -6,9 +6,26 @@ import { getFeatureBySlug } from "@data/features";
 import Stats from '@components/sections/Stats.astro';
 import { statsLists } from '@data/stats';
 import Eyebrow from '@components/ui/Eyebrow.astro';
+import { faqLists } from "@data/faqs";
+import Faqs from '@components/sections/Faqs.astro';
+
+// --- Rich Snippet FAQ Schema ---
+const serviceFaqs = faqLists.ley_marco_ciberseguridad?.faqs || [];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": serviceFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 
 const heroContent = {
-    title: "Servicios - Ley 21663", //"Contact Us",
+    title: "Servicios - Ley de Ciberseguridad (Ley 21663)", //"Contact Us",
     description: ""
 }
 
@@ -35,9 +52,19 @@ const sideBySideStats = {
     }
 };
 
+const faqsSection = {
+    eyebrow: "Preguntas frecuentes",
+    title: 'Ley marco de Ciberseguridad',
+    description: 'Encuentra las respuestas a las preguntas más frecuentes sobre nuestros servicios.',
+    faqs: faqLists.ley_ciberseguridad.faqs
+}
+
 ---
 
-<Layout title="Contáctanos" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.">
+<Layout title="Servicios - Ley de Ciberseguridad (Ley 21663)" description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad Ley 21663, reduciendo riesgos y garantizando el cumplimiento normativo.">
+      <!-- Rich Snippet FAQ Structured Data -->
+      <script type="application/ld+json" is:inline>{JSON.stringify(faqSchema)}</script>
+
     <InnerHero content={heroContent} />
     {feature && <FeatureDetails feature={feature} />}
 
@@ -75,6 +102,6 @@ const sideBySideStats = {
       </div>
     </div>
     </div>
-
     <Stats content={sideBySideStats} background='base' padding="base"/>
-</Layout>
+    <Faqs content={faqsSection} background='light' padding="base"/>
+  </Layout>
