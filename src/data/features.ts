@@ -27,8 +27,6 @@ export interface FeatureList {
 
 // Example feature lists
 export const featureLists: Record<string, FeatureList> = {
-
-
     main: {
         id: 'main',
         features: [
