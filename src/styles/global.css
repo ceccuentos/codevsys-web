@@ -88,6 +88,15 @@
 
 @layer base {
 
+/* Asegura tamaño de fuente explícito para h1 dentro de section, article, nav y aside */
+section h1,
+article h1,
+nav h1,
+aside h1 {
+  font-size: var(--text-h1, 2.5rem);
+}
+
+
 
     [data-theme='zeus'] {
         --color-primary: #3557c1;

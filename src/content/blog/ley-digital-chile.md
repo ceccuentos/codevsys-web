@@ -16,7 +16,7 @@ jsonLdString: >
     "@type": "BlogPosting",
     "headline": "Impacto de las leyes 21.459, 21.663 y 21.719 en la ciberseguridad y protección de datos personales en Chile",
     "description": "Descubre cómo las leyes 21.459 (delitos informáticos), 21.663 (ley marco de ciberseguridad) y 21.719 (protección de datos personales) están transformando el cumplimiento normativo y la gestión de riesgos en las empresas chilenas. Aprende a prepararte para los nuevos desafíos legales y técnicos en ciberseguridad y privacidad.",
-    "datePublished": "2025-05-05",
+    "datePublished": "2025-05-05T00:00:00-04:00",
     "author": {
       "@type": "Person",
       "name": "Cristian E. Contreras Cabrera",

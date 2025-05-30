@@ -32,7 +32,7 @@ jsonLdString: >
     "@type": "BlogPosting",
     "headline": "¿Qué es NERC-CIP? El estándar de ciberseguridad para el sector eléctrico chileno",
     "description": "Conoce el estándar NERC-CIP y cómo su implementación fortalece la ciberseguridad, el cumplimiento normativo y las mejores prácticas en empresas del sector eléctrico en Chile. Descubre recomendaciones clave y recursos para asegurar la continuidad operacional y la protección de infraestructuras críticas.",
-    "datePublished": "2024-12-23",
+    "datePublished": "2024-12-23T00:00:00-04:00",
     "author": {
       "@type": "Person",
       "name": "Cristian E. Contreras Cabrera",
