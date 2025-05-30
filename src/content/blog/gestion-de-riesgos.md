@@ -27,11 +27,12 @@ jsonLdString: >
       "@type": "Organization",
       "name": "Codevsys",
       "logo": {
-      "@type": "ImageObject",
-       "url": "https://www.codevsys.cl/images/logo.png"
+        "@type": "ImageObject",
+        "url": "https://www.codevsys.cl/images/logo.png"
+       }
     }
-  },
   }
+
 ---
 
 ¿Sabías que el cibercrimen mueve casi el 0.8% del PIB Mundial?
