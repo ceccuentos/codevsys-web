@@ -32,79 +32,79 @@ export const featureLists: Record<string, FeatureList> = {
         features: [
             {
                 icon: Zap,
-                title: 'Estándar NERC-CIP Industria Eléctrica Chilena',
+                title: '¿Qué se necesita para la ciberseguridad bajo el estándar NERC-CIP?',
                 description: 'Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.',
                 image: '/images/servicios/servicio-1.webp',
 
-                slug: 'nerc-cip',
-                descriptionPage: 'Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad NERC CIP, reduciendo riesgos y garantizando el cumplimiento normativo.',
+                slug: 'consultoria-nerc-cip',
+                descriptionPage: 'Brindamos el apoyo necesario a empresas del sector eléctrico y de infraestructura crítica para cumplir con los estándares de ciberseguridad NERC-CIP. Nuestros servicios incluyen evaluaciones de cumplimiento, desarrollo de políticas de seguridad y gestión de incidentes, garantizando la protección de tus activos críticos.',
                 featuresPage: [
                     {
                         id: 'nerc-cip-1',
                         title: 'Inventario de Ciberactivos',
-                        description: 'Identificamos y clasificamos tus activos críticos OT/IT conforme a NERC-CIP, sentando la base para una gestión segura y trazable.',
+                        description: 'Identificar y clasificar activos críticos OT/IT conforme a NERC-CIP, sentando las bases para la implementación de controles de ciberseguridad.',
                         image: '/images/servicios/nerc-cip/activo.webp'
                     },
                     {
                         id: 'nerc-cip-2',
                         title: 'Gestión de Riesgos CIP',
-                        description: 'Evaluamos riesgos operacionales y cibernéticos, priorizando controles para cumplir con los requerimientos regulatorios y proteger la infraestructura crítica.',
+                        description: 'Evaluar riesgos operacionales y cibernéticos, priorizando controles para cumplir con los requerimientos regulatorios y proteger la infraestructura crítica.',
                         image: '/images/servicios/nerc-cip/riesgos.webp'
                     },
                     {
                         id: 'nerc-cip-3',
                         title: 'Capacitación y Awareness CIP',
-                        description: 'Diseñamos programas de formación y cultura de ciberseguridad alineados con NERC-CIP, enfocados en roles operacionales y técnicos.',
+                        description: 'Diseñar programas de formación y cultura de ciberseguridad alineados con NERC-CIP, enfocados en roles operacionales y técnicos.',
                         image: '/images/servicios/nerc-cip/capacitacion.webp'
                     },
                     {
                         id: 'nerc-cip-4',
                         title: 'Plan de Cumplimiento CIP',
-                        description: 'Creamos un plan detallado de implementación de controles y evidencia para auditorías del Coordinador Eléctrico Nacional.',
+                        description: 'Crear planes detallados de implementación de controles y evidencia para auditorías del Coordinador Eléctrico Nacional.',
                         image: '/images/servicios/nerc-cip/plan.webp'
                     }
                 ]
             },
             {
                 icon: Shield,
-                title: 'Ley Marco de Ciberseguridad Chilena',
-                description: 'Brindamos apoyo especializado para ayudar a las organizaciones a cumplir con los requisitos de la Ley Marco de Ciberseguridad de Chile, incluyendo evaluaciones de cumplimiento, desarrollo de políticas y gestión de incidentes.',
+                title: '¿Qué necesitas para el cumplimiento Normativo la Ley de Ciberseguridad Chilena?',
+                description: 'Brindamos apoyo especializado para ayudar a las organizaciones a cumplir con los requisitos de la Ley de Ciberseguridad Chilena, incluyendo evaluaciones de controles, desarrollo de políticas y gestión de incidentes.',
                 image: '/images/servicios/servicio-2.webp',
-                slug: 'ley-marco-ciberseguridad',
-                descriptionPage: 'Brindamos apoyo especializado para ayudar a las organizaciones a cumplir con los requisitos de la Ley Marco de Ciberseguridad de Chile, incluyendo evaluaciones de cumplimiento, desarrollo de políticas y gestión de incidentes.',
+                slug: 'ley-ciberseguridad-chilena',
+                descriptionPage: 'Asesoría especializada para cumplir con la nueva Ley Marco de Ciberseguridad en Chile. Evaluaciones, políticas y gestión de incidentes para tu empresa.',
                 featuresPage: [
                     {
                         id: 'ley-marco-1',
-                        title: 'Ley Marco de Ciberseguridad Chilena',
-                        description: 'Diseñamos e implementamos políticas, procedimientos y protocolos para alinear tu organización con la Ley Marco de Ciberseguridad y sus reglamentos asociados.',
+                        title: 'Ley de Ciberseguridad Chilena',
+                        description: 'Diseñar e implementar políticas, procedimientos y protocolos para alinear tu organización con la Ley de Ciberseguridad Chilena y sus reglamentos asociados.',
                         image: '/images/servicios/ley-marco-ciberseguridad/ley-marco-1.webp'
                     },
                     {
                         id: 'ley-marco-2',
                         title: 'Procedimientos y Resiliencia',
-                        description: 'Establecemos procedimientos de respuesta a incidentes, incluyendo planes DRP y análisis BIA para asegurar continuidad operativa y reportes efectivos al CSIRT Nacional.',
+                        description: 'Establecer e implementar procedimientos de respuesta a incidentes, incluyendo planes DRP y análisis BIA para asegurar continuidad operativa y reportes efectivos al CSIRT Nacional.',
                         image: '/images/servicios/ley-marco-ciberseguridad/ley-marco-2.webp'
                     },
                     {
                         id: 'ley-marco-3',
-                        title: 'Políticas Claras y Efectivas',
-                        description: 'Desarrollamos políticas de ciberseguridad adaptadas a tu organización, promoviendo una cultura de seguridad y cumplimiento normativo.',
+                        title: 'Capacitaciones y Conciencia de Ciberseguridad',
+                        description: 'Desarrollar planes de capacitación de ciberseguridad adecuados a la dinámica interna de la organización.',
                         image: '/images/servicios/ley-marco-ciberseguridad/ley-marco-3.webp'
                     },
                     {
                         id: 'ley-marco-4',
                         title: 'Gobernanza de Ciberseguridad',
-                        description: 'Diseñamos estructuras de roles, responsabilidades y comités, asegurando una gestión clara y responsable de la ciberseguridad en todos los niveles de la organización.',
+                        description: 'Diseñar estructuras de roles, responsabilidades y comités, asegurando una gestión clara y responsable de la ciberseguridad en todos los niveles de la organización.',
                         image: '/images/servicios/ley-marco-ciberseguridad/ley-marco-4.webp'
                     }
                 ]
             },
             {
                 icon: TabletSmartphone,
-                title: 'Desarrollo de Apps IA Generativa',
-                description: 'Creamos soluciones tecnológicas avanzadas basadas en técnicas del tipo RAG con IA generativa, optimizando la toma de decisiones mediante la integración de grandes bases de datos con modelos de lenguaje natural al servicio del usuario final.',
+                title: '¿Cómo tu organización puede optimizar sus procesos por medio de la IA?',
+                description: '¿Cómo tu organización puede optimizar sus procesos por medio de la IA?',
                 image: '/images/servicios/servicio-3.webp',
-                slug: 'ia',
+                slug: 'ia-generativa',
                 descriptionPage: 'Creamos soluciones tecnológicas avanzadas basadas en técnicas del tipo RAG con IA generativa, optimizando la toma de decisiones mediante la integración de grandes bases de datos con modelos de lenguaje natural al servicio del usuario final.',
                 featuresPage: [
                     {
@@ -119,12 +119,6 @@ export const featureLists: Record<string, FeatureList> = {
                         description: 'Diseñamos agentes de IA capaces de tomar decisiones y ejecutar acciones de forma independiente, optimizando procesos y reduciendo la intervención humana.',
                         image: '/images/servicios/ia/ia-2.webp'
                     },
-                    // {
-                    //     id: 'ia-3',
-                    //     title: 'Desarrollo de Chatbots Inteligentes',
-                    //     description: 'Creamos chatbots impulsados por IA generativa que interactúan de manera natural con los usuarios, proporcionando respuestas contextuales y mejorando la experiencia del cliente.',
-                    //     image: '/images/servicios/ia/ia-3.webp'
-                    // },
                     {
                         id: 'ia-3',
                         title: 'Anonimización de Datos Sensibles',
@@ -144,7 +138,7 @@ export const featureLists: Record<string, FeatureList> = {
                 title: 'Integración de Aplicaciones con Sistemas ERP',
                 description: 'Diseñamos e implementamos soluciones que conectan aplicaciones personalizadas con sistemas ERP como SAP, Oracle, o Microsoft Dynamics, permitiendo una gestión empresarial más eficiente y automatizada.',
                 image: '/images/servicios/servicio-4.webp',
-                slug: 'integraciones',
+                slug: 'integraciones-software',
                 descriptionPage: 'Diseñamos e implementamos soluciones que conectan aplicaciones personalizadas con sistemas ERP como SAP, Oracle, o Microsoft Dynamics, permitiendo una gestión empresarial más eficiente y automatizada.',
                 featuresPage: [
                     {

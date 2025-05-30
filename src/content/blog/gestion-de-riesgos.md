@@ -19,10 +19,18 @@ jsonLdString: >
     "description": "Aprende cómo implementar una gestión de riesgos efectiva en ciberseguridad para proteger tus activos digitales, cumplir con el estándar NERC-CIP y la nueva ley de ciberseguridad en Chile. Descubre los tres pasos clave para fortalecer la resiliencia y el cumplimiento normativo de tu empresa frente a amenazas y ataques en el entorno digital actual",
     "datePublished": "2025-03-19T00:00:00-04:00",
     "author": {
-      "@type": "Person",
-      "name": "Cristian E. Contreras Cabrera",
-      "url": "https://www.ceccuentos.com"
+      "@type": "Organization",
+      "name": "Codevsys",
+      "url": "https://www.codevsys.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Codevsys",
+      "logo": {
+      "@type": "ImageObject",
+       "url": "https://www.codevsys.cl/images/logo.png"
     }
+  },
   }
 ---
 

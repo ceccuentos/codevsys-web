@@ -42,30 +42,6 @@ export const statsLists: Record<string, StatsList> = {
             }
         ]
     },
-    withContent: {
-        id: 'withContent',
-        stats: [
-            {
-                value: 10,
-                label: 'Color Schemes',
-            },
-            {
-                value: 14.53,
-                label: 'Core Bundle Size',
-                suffix: 'KB'
-            },
-            {
-                value: 11,
-                label: 'Pre-Built Components',
-            },
-            {
-                value: 105,
-                label: 'Build Time',
-                prefix: '<100',
-                suffix: 's'
-            }
-        ]
-    },
     nerc_cip: {
         id: 'nerc_cip',
         stats: [
@@ -133,7 +109,7 @@ export const statsLists: Record<string, StatsList> = {
             },
             {
                 value: 85,
-                label: ' reducción en errores humanos al implementar agentes autónomos.',
+                label: ' Reducción en errores humanos al implementar agentes autónomos.',
                 prefix: '-',
                 suffix: '%'
             },
@@ -144,7 +120,7 @@ export const statsLists: Record<string, StatsList> = {
             },
             {
                 value: 70,
-                label: ' eficiencia en procesos automatizados mediante IA generativa.',
+                label: ' Eficiencia en procesos automatizados mediante IA generativa.',
                 prefix: '+',
                 suffix: '%'
             }

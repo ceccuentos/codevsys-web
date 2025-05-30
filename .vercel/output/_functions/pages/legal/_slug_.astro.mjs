@@ -1,8 +1,8 @@
-import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_CkC9QQwS.mjs';
+import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { r as renderEntry, g as getCollection } from '../../chunks/_astro_content_BCIsIKml.mjs';
-import { a as $$Layout } from '../../chunks/Layout_DNILZkIK.mjs';
-import { $ as $$InnerHero } from '../../chunks/InnerHero_7903qgB1.mjs';
+import { g as getCollection, r as renderEntry } from '../../chunks/_astro_content_CHbVwHgK.mjs';
+import { a as $$Layout } from '../../chunks/Layout_DU8dSlIb.mjs';
+import { $ as $$InnerHero } from '../../chunks/InnerHero_D1rDMW7E.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro("http://localhost:4321");
@@ -16,7 +16,15 @@ async function getStaticPaths() {
 const $$slug = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$slug;
-  const { entry } = Astro2.props;
+  let slugParam = Astro2.params.slug;
+  if (Array.isArray(slugParam)) {
+    slugParam = slugParam.join("/");
+  }
+  const entrys = await getCollection("legal");
+  const entry = entrys.find((p) => p.id === slugParam);
+  if (!entry) {
+    throw new Error("La p\xE1gina legal solicitada no existe. Verifica el slug en la URL o el nombre del archivo Markdown.");
+  }
   const { Content } = await renderEntry(entry);
   const seoTitle = entry.data.seo?.title || entry.data.title;
   const seoDescription = entry.data.seo?.description || "";
@@ -37,11 +45,11 @@ const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/leg
 const $$url = "/legal/[slug]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-    __proto__: null,
-    default: $$slug,
-    file: $$file,
-    getStaticPaths,
-    url: $$url
+  __proto__: null,
+  default: $$slug,
+  file: $$file,
+  getStaticPaths,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;

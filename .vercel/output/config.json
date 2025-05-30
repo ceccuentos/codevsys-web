@@ -56,19 +56,19 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/servicios/ia/?$",
+			"src": "^/servicios/consultoria-nerc-cip/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/servicios/integraciones/?$",
+			"src": "^/servicios/ia-generativa/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/servicios/ley-marco-ciberseguridad/?$",
+			"src": "^/servicios/integraciones-software/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/servicios/nerc-cip/?$",
+			"src": "^/servicios/ley-ciberseguridad-chilena/?$",
 			"dest": "_render"
 		},
 		{

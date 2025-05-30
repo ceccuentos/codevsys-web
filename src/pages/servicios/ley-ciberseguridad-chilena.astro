@@ -28,15 +28,14 @@ const faqSchema = {
 const jsonLdString = JSON.stringify(faqSchema, null, 2); // Bien indentado para legibilidad
 
 const heroContent = {
-    title: "Servicios - Ley de Ciberseguridad (Ley 21663)", //"Contact Us",
+    title: "Consultoría en Ley de Ciberseguridad Chilena", //"Contact Us",
     description: ""
 }
 
-const feature = getFeatureBySlug('ley-marco-ciberseguridad');
+const feature = getFeatureBySlug('ley-ciberseguridad-chilena');
 
 const beneficios = [
-  "Cumples con la Ley 21.663 mediante políticas y reportes claros, garantizando trazabilidad legal y técnica ante fiscalizaciones y auditorías.",
-  "Reduces el impacto de incidentes operativos con DRP y BIA, asegurando continuidad de servicios esenciales en entornos críticos.",
+  "Cumples con la Ley de Ciberseguridad (ley 21.663) mediante políticas y reportes claros, garantizando trazabilidad legal y técnica ante fiscalizaciones y auditorías.",
   "Mejoras la capacidad de respuesta con protocolos definidos y personal entrenado, acortando tiempos de detección, contención y notificación al CSIRT.",
   "Fortaleces la cultura interna de ciberseguridad, promoviendo el involucramiento de todas las áreas en la protección de información y sistemas.",
   "Aumentas la confianza de clientes y entes reguladores al demostrar una gestión proactiva y madura de riesgos cibernéticos."
@@ -57,15 +56,15 @@ const sideBySideStats = {
 
 const faqsSection = {
     eyebrow: "Preguntas frecuentes",
-    title: 'Ley marco de Ciberseguridad',
+    title: 'Ley de Ciberseguridad Chilena',
     description: 'Encuentra las respuestas a las preguntas más frecuentes sobre nuestros servicios.',
     faqs: faqLists.ley_ciberseguridad.faqs
 }
 
 ---
 
-<Layout title="Servicios - Ley de Ciberseguridad (Ley 21663)"
-description="Ayudamos a empresas del sector energético y de infraestructura crítica a cumplir con los estándares de ciberseguridad Ley 21663, reduciendo riesgos y garantizando el cumplimiento normativo."
+<Layout title="Consultoría en Ley de Ciberseguridad Chilena – Cumplimiento Normativo"
+description="Asesoría especializada para cumplir con la nueva Ley Marco de Ciberseguridad en Chile. Evaluaciones, políticas y gestión de incidentes para tu empresa."
 jsonLdString={jsonLdString}>
 
     <InnerHero content={heroContent} />

@@ -1,9 +1,9 @@
-import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate } from '../../chunks/astro/server_CkC9QQwS.mjs';
+import { a as createAstro, c as createComponent, r as renderComponent, b as renderTemplate } from '../../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../chunks/_astro_content_BCIsIKml.mjs';
-import { $ as $$PaginatedBlogLayout } from '../../chunks/PaginatedBlogLayout_CgeDwAGr.mjs';
-import { c as categories } from '../../chunks/BlogPost_vS9ZV2io.mjs';
-import { c as blogSetting } from '../../chunks/Layout_DNILZkIK.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_CHbVwHgK.mjs';
+import { $ as $$PaginatedBlogLayout } from '../../chunks/PaginatedBlogLayout_Cf86e2Dx.mjs';
+import { c as categories } from '../../chunks/BlogPost_1in78oa7.mjs';
+import { c as blogSetting } from '../../chunks/Layout_DU8dSlIb.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro("http://localhost:4321");
@@ -29,9 +29,6 @@ const $$ = createComponent(async ($$result, $$props, $$slots) => {
   }
   const slugString = slugArray.join("/");
   const category = categories.find((cat) => cat.slug === slugString);
-  console.log("Valor calculado de category:", category);
-  console.log("Valor Astro.props:", Astro2.props);
-  console.log("Valor de Astro.params:", Astro2.params);
   if (!category) {
     throw new Error("No se encontró la categoría para este slug.");
   }

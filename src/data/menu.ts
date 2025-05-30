@@ -4,9 +4,9 @@ export const headerMenu = [
     { name: 'Nosotros', link: '/team' },
     { name: 'Servicios', showArrow: false,
         children: [
+            { name: 'Ley de Ciberseguridad Chile', link: '/servicios/ley-ciberseguridad-chilena' },
             { name: 'Consultoría NERC-CIP', link: '/servicios/consultoria-nerc-cip' },
             { name: 'IA Generativa', link: '/servicios/ia-generativa' },
-            { name: 'Ley de Ciberseguridad Chile', link: '/servicios/ley-ciberseguridad-chilena' },
             { name: 'Integración de Aplicaciones', link: '/servicios/integraciones-software' },
         ]
     },

@@ -1,24 +1,8 @@
-import { a as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, r as renderComponent, b as renderTemplate, u as unescapeHTML } from '../chunks/astro/server_CkC9QQwS.mjs';
+import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, u as unescapeHTML } from '../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../chunks/Layout_DNILZkIK.mjs';
-import { $ as $$InnerHero } from '../chunks/InnerHero_7903qgB1.mjs';
-import { g as getCollection } from '../chunks/_astro_content_BCIsIKml.mjs';
-import { c as getPaddingClass } from '../chunks/styleUtils_BtOvH2bT.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_Cbj1YpFU.mjs';
+import { a as $$Layout } from '../chunks/Layout_DU8dSlIb.mjs';
+import { $ as $$InnerHero } from '../chunks/InnerHero_D1rDMW7E.mjs';
 export { renderers } from '../renderers.mjs';
-
-const $$Astro = createAstro("http://localhost:4321");
-const $$TeamGrid = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$TeamGrid;
-  const { padding, paddingTop, paddingBottom } = Astro2.props;
-  const paddingClass = getPaddingClass({ padding, paddingTop, paddingBottom });
-  const teamMembers = await getCollection("team", ({ data }) => {
-    return data.publish !== false;
-  });
-  const sortedTeamMembers = teamMembers.sort((a, b) => a.data.order - b.data.order);
-  return renderTemplate`${maybeRenderHead()}<section${addAttribute(["relative", paddingClass], "class:list")}> <div class="site-container mx-auto px-4"> <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 xl:gap-x-8 xl:gap-y-14"> ${sortedTeamMembers.map((member, index) => renderTemplate`<div class="flex flex-col group" data-aos="fade-up"${addAttribute(index * 100, "data-aos-delay")} data-aos-duration="800"> <a${addAttribute(`/team/${member.id}`, "href")} class="flex flex-col group rounded-md"> <div class="relative mb-4 overflow-hidden rounded-md"> <span class="absolute inset-0 -mt-12 h-400 w-1/2 translate-x-[250%] rotate-12 bg-white opacity-20  group-hover:transition-all  group-hover:duration-300 ease-out group-hover:translate-x-[-250%] z-10"></span> ${member.data.headshot ? renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": member.data.headshot, "alt": "", "width": 896, "height": 1280, "quality": 80, "format": "webp", "class": "w-full h-auto aspect-[3/4] object-cover rounded-md group-hover:scale-[1.02] hover:brightness-110 transition-all duration-500 ease-in-out", "loading": "eager", "decoding": "async" })}` : renderTemplate`<div class="w-full aspect-[3/4] bg-gray-200 rounded-md flex items-center justify-center"> <span class="text-gray-400">No Image</span> </div>`} </div> <h3 class="text-h5 font-medium transition-colors duration-500 group-hover:text-primary"> ${member.data.name} </h3> <p class="text-xsmall text-body-base">${member.data.jobTitle}</p> </a> </div>`)} </div> </div> </section>`;
-}, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/components/sections/TeamGrid.astro", void 0);
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
   const seoTitle = "Nosotros";
@@ -57,17 +41,17 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
       description: "Crecimiento e innovaci\xF3n, actuando con transparencia, honestidad y compromiso."
     }
   ];
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": seoTitle, "description": seoDescription }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })} ${maybeRenderHead()}<section class="py-small"> <div class="site-container px-8"> <div class="space-y-12"> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Manifiesto</h2> <ul class="space-y-3"> ${manifiesto.map((manifiesto2) => renderTemplate`<li> <span class="text-base text-gray-800">${unescapeHTML(manifiesto2.description.replace(/\n/g, "<br>"))}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Misión</h2> <ul class="space-y-3"> ${misionContent.map((misionContent2) => renderTemplate`<li> <span class="text-base text-gray-800">${misionContent2.description}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Visión</h2> <ul class="space-y-3"> ${visionContent.map((visionContent2) => renderTemplate`<li> <span class="text-base text-gray-800">${visionContent2.description}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Valores</h2> <ul class="space-y-3"> ${valoresContent.map((valoresContent2) => renderTemplate`<li> <span class="font-bold text-base text-[#3557c1] mr-2">${valoresContent2.name}.</span> <span class="text-base text-gray-800">${valoresContent2.description}</span> </li>`)} </ul> </div> </div> </div> </section> <section class="py-10"> <div class="site-container px-4 md:px-8 max-w-5xl mx-auto"> <h2 class="text-3xl font-extrabold text-[#3557c1] mb-2 text-center tracking-tight">Nuestro Equipo</h2> <p class="text-lg text-gray-600 text-center mb-10">Conoce a las personas que hacen posible nuestra misión</p> ${renderComponent($$result2, "TeamGrid", $$TeamGrid, { "padding": "base" })} </div> </section> ` })}`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": seoTitle, "description": seoDescription }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "InnerHero", $$InnerHero, { "content": heroContent })} ${maybeRenderHead()}<section class="py-small"> <div class="site-container px-8"> <div class="space-y-12"> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Manifiesto</h2> <ul class="space-y-3"> ${manifiesto.map((manifiesto2) => renderTemplate`<li> <span class="text-base text-gray-800">${unescapeHTML(manifiesto2.description.replace(/\n/g, "<br>"))}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Misión</h2> <ul class="space-y-3"> ${misionContent.map((misionContent2) => renderTemplate`<li> <span class="text-base text-gray-800">${misionContent2.description}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Visión</h2> <ul class="space-y-3"> ${visionContent.map((visionContent2) => renderTemplate`<li> <span class="text-base text-gray-800">${visionContent2.description}</span> </li>`)} </ul> </div> <div> <h2 class="text-2xl font-semibold text-[#3557c1] mb-4">Valores</h2> <ul class="space-y-3"> ${valoresContent.map((valoresContent2) => renderTemplate`<li> <span class="font-bold text-base text-[#3557c1] mr-2">${valoresContent2.name}.</span> <span class="text-base text-gray-800">${valoresContent2.description}</span> </li>`)} </ul> </div> </div> </div> </section>  ` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/team/index.astro", void 0);
 
 const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/team/index.astro";
 const $$url = "/team";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-    __proto__: null,
-    default: $$Index,
-    file: $$file,
-    url: $$url
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;

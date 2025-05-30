@@ -1,10 +1,11 @@
-import { a as createAstro, c as createComponent, m as maybeRenderHead, b as renderTemplate, r as renderComponent, F as Fragment } from '../../chunks/astro/server_CkC9QQwS.mjs';
+import { a as createAstro, c as createComponent, m as maybeRenderHead, b as renderTemplate, r as renderComponent, F as Fragment } from '../../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { g as getCollection, r as renderEntry } from '../../chunks/_astro_content_BCIsIKml.mjs';
-import { a as $$Layout } from '../../chunks/Layout_DNILZkIK.mjs';
+import { g as getCollection, r as renderEntry } from '../../chunks/_astro_content_CHbVwHgK.mjs';
+import { a as $$Layout } from '../../chunks/Layout_DU8dSlIb.mjs';
 import 'clsx';
-import { $ as $$Date } from '../../chunks/Date_Ca2DQN8_.mjs';
-import { $ as $$Image } from '../../chunks/_astro_assets_Cbj1YpFU.mjs';
+import { $ as $$Date } from '../../chunks/Date_DlSMD_mB.mjs';
+import { $ as $$Image } from '../../chunks/_astro_assets_CUDU_6_o.mjs';
+import { $ as $$Subscription } from '../../chunks/Subscription_Dan0Rt_e.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$1 = createAstro("http://localhost:4321");
@@ -27,6 +28,21 @@ async function getStaticPaths() {
 const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$;
+  const styleGuideSection = {
+    eyebrow: "Síguenos",
+    headline: "Suscríbete al Newsletter",
+    description: "Mantente informado sobre ciberseguridad, NERC-CIP, IA generativa, innovación tecnológica y mejores prácticas para industrias críticas.",
+    newsLetterForm: [
+      {
+        title: "¡Recibe nuestras actualizaciones periódicas!",
+        description: "Entérate antes que nadie sobre nuevas regulaciones, casos de uso de IA generativa, herramientas de automatización y tendencias tecnológicas clave para tu empresa.",
+        successTitle: "¡Suscripción exitosa!",
+        successMessage: "Gracias por unirte. Revisa tu bandeja de entrada para comenzar a recibir nuestros contenidos exclusivos.",
+        buttonText: "Suscribirme",
+        fileDownload: ""
+      }
+    ]
+  };
   let slugParam = Astro2.params.slug;
   if (Array.isArray(slugParam)) {
     slugParam = slugParam.join("/");
@@ -47,7 +63,10 @@ const $$ = createComponent(async ($$result, $$props, $$slots) => {
     const siteUrl = "http://localhost:4321";
     seoImage = new URL(post.data.featuredImage.src, siteUrl).toString();
   }
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": seoTitle, "description": seoDescription, "image": seoImage }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="w-full h-120 absolute top-0 left-0 z-0 overflow-hidden border-b border-black"> ${post.data.featuredImage && renderTemplate`${renderComponent($$result2, "Fragment", Fragment, {}, { "default": async ($$result3) => renderTemplate` ${renderComponent($$result3, "Image", $$Image, { "src": post.data.featuredImage, "alt": "", "width": 1920, "height": 1080, "class": "w-full h-full object-cover grayscale opacity-20", "quality": 60 })} <div class="absolute inset-0 bg-primary/10 backdrop-blur-md"></div> ` })}`} </div> <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base"> <div class="mt-42 mb-12 text-center"> <h1>${post.data.title}</h1> <div class="flex items-center justify-center gap-4 text-gray-600"> ${renderComponent($$result2, "Date", $$Date, { "date": post.data.publishDate })} ${post.data.categories && renderTemplate`<div class="flex flex-wrap gap-2"> ${post.data.categories.map((category) => renderTemplate`${renderComponent($$result2, "CategoryPill", $$CategoryPill, { "category": category })}`)} </div>`} </div> </div> ${post.data.featuredImage && renderTemplate`${renderComponent($$result2, "Image", $$Image, { "src": post.data.featuredImage, "alt": "", "width": 1200, "height": 675, "class": "w-full h-auto rounded-lg border mb-12 border-black", "quality": 80, "format": "webp" })}`} <div class="mt-8"> ${renderComponent($$result2, "Content", Content, {})} </div> </article> ` })}`;
+  const typedPost = post;
+  const showSubscription = !!typedPost.data.showSubscription;
+  const subscriptionContent = typedPost.data.subscriptionContent || styleGuideSection;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": seoTitle, "description": seoDescription, "image": seoImage, "jsonLdString": post.data.jsonLdString }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="w-full h-120 absolute top-0 left-0 z-0 overflow-hidden border-b border-black"> ${post.data.featuredImage && renderTemplate`${renderComponent($$result2, "Fragment", Fragment, {}, { "default": async ($$result3) => renderTemplate` ${renderComponent($$result3, "Image", $$Image, { "src": post.data.featuredImage, "alt": "", "width": 1920, "height": 1080, "class": "w-full h-full object-cover grayscale opacity-20", "quality": 60 })} <div class="absolute inset-0 bg-primary/10 backdrop-blur-md"></div> ` })}`} </div> <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base"> <div class="mt-42 mb-12 text-center"> <h1>${post.data.title}</h1> <div class="flex items-center justify-center gap-4 text-gray-600"> ${renderComponent($$result2, "Date", $$Date, { "date": post.data.publishDate })} ${post.data.categories && renderTemplate`<div class="flex flex-wrap gap-2"> ${post.data.categories.map((category) => renderTemplate`${renderComponent($$result2, "CategoryPill", $$CategoryPill, { "category": category })}`)} </div>`} </div> </div> ${post.data.featuredImage && renderTemplate`${renderComponent($$result2, "Image", $$Image, { "src": post.data.featuredImage, "alt": "", "width": 1200, "height": 675, "class": "w-full h-auto rounded-lg border mb-12 border-black", "quality": 80, "format": "webp" })}`} <div class="mt-8"> ${renderComponent($$result2, "Content", Content, {})} </div> </article> ${showSubscription && renderTemplate`${renderComponent($$result2, "Subscription", $$Subscription, { "content": subscriptionContent, "imagePosition": "right", "background": "light", "padding": "base" })}`}` })}`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/blog/[...slug].astro", void 0);
 const $$file = "/Users/cristiancontrerascabrera/astro/codevsys-web/src/pages/blog/[...slug].astro";
 const $$url = "/blog/[...slug]";

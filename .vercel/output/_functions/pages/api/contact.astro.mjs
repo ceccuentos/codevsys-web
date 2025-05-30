@@ -17,8 +17,17 @@ const POST = async ({ request }) => {
   const terms = form.get("terms");
   const termsChecked = terms === "on";
   const termsCheckedString = termsChecked ? "Sí" : "No";
-  form.get("g-recaptcha-response");
-  process.env.RECAPTCHA_SECRET_KEY;
+  const recaptchaToken = form.get("g-recaptcha-response");
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `secret=${secretKey}&response=${recaptchaToken}`
+  });
+  const verifyData = await verifyRes.json();
+  if (!verifyData.success) {
+    return new Response(JSON.stringify({ success: false, error: "Captcha inválido" }), { status: 400 });
+  }
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {

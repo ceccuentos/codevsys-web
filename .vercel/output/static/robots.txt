@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://titan-core.com/sitemap-index.xml 
+Sitemap: https://codevsys.cl/sitemap-index.xml
