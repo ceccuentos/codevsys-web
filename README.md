@@ -81,6 +81,10 @@ Estas variables permiten la conexión segura con los servicios de almacenamiento
    ```sh
    npm run preview
    ```
+5. Para subir a Vercel
+   ```shell
+   vercel --prod --force
+   ```
 
 ## Servicios integrados con Supabase
 
