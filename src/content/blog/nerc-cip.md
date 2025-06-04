@@ -2,10 +2,15 @@
 
 title: "¿Qué es NERC-CIP?"
 excerpt: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
-featuredImage: "./images/ciberseguridad_NERC-CIP.png"
+featuredImage: "./images/ciberseguridad_NERC-CIP.webp"
 publishDate: "2024-12-23"
 publish: true
 categories: ["Ciberseguridad", "NERC-CIP"]
+
+showBrochure: true
+brochureText: "¿Quieres la guía de implementación NERC-CIP PDF?"
+brochureButtonText: "Descargar Guía Ahora"
+# brochureLink: "#id-del-formulario-especifico" # Opcional: si quieres un ancla diferente a #subscription"
 
 seo:
   title: "Qué es Nerc-CIP"
@@ -14,17 +19,18 @@ seo:
 showSubscription: true
 subscriptionContent:
   eyebrow: "Seguridad Operacional"
-  headline: "Descarga la guía de Implementación NERC-CIP"
-  description: "Recomendaciones específicas y mejores prácticas."
-  image: "/images/guia-practica-NERC-CIP.png"
+  headline: "Descarga la Guía de Implementación NERC-CIP PDF"
+  description: "Implementación por fases, control de ciberactivos, respuesta a incidentes y cumplimiento regulatorio para el sector eléctrico chileno."
+  # image: "../../assets/images/blog/consultoria-nerc-cip-codevsys.png"
   imageAlt: "Portada Guía NERC-CIP"
   newsLetterForm:
-    - title: "¡Descarga la guía de Implementación NERC-CIP!"
-      description: "Guía paso a paso para implementar la normativa NERC-CIP en empresas del sector eléctrico chileno, con recomendaciones específicas y mejores prácticas"
+    - title: "¡Descarga la Guía Técnica NERC-CIP PDF!"
+      description: "Incluye categorización de impacto, estructura de roles, fases de implementación, controles técnicos y mejores prácticas. Ideal para generadoras, transmisoras y centros de control OT."
       successTitle: "¡Descarga exitosa!"
-      successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas."
+      successMessage: "Gracias por descargar nuestra guía. Revisa tu carpeta de descargas o tu correo electrónico si fue enviado automáticamente."
       buttonText: "Descargar ahora"
       fileDownload: "Guia_Implementacion_NERC_CIP.pdf"
+
 
 jsonLdString: >
   {

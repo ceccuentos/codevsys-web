@@ -27,6 +27,11 @@ const blog = defineCollection({
             subscriptionContent: z.any().optional(),
             // Campo para Rich JSON-LD
             jsonLdString: z.string().optional(),
+            // Nuevos campos para el CTA específico del post
+            showBrochure: z.boolean().optional(),
+            brochureText: z.string().optional(),
+            brochureButtonText: z.string().optional(),
+            brochureLink: z.string().optional(),
         }),
 });
 

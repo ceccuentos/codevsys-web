@@ -64,16 +64,16 @@ const sideBySideStats = {
 
 const styleGuideSection = {
   eyebrow: "Seguridad Operacional",
-  headline: "Descarga la guía del Plan de Recuperación ante Desastres",
-  description: "Prepárate ante incidentes críticos. Descarga nuestra guía basada en el estándar NERC-CIP y fortalece tu resiliencia operativa.",
+  headline: "Descarga la Guía de Implementación NERC-CIP para el Sector Eléctrico Chileno",
+  description: "Fortalece tu postura de ciberseguridad y cumple con los estándares del Coordinador Eléctrico Nacional. Esta guía técnica te acompaña paso a paso en la implementación del marco NERC-CIP adaptado a Chile.",
   newsLetterForm: [
     {
-      title: "Descarga la Guía del Plan de Recuperación ante Desastres",
-      description: "Incluye evaluación de riesgos, protocolos de respuesta, respaldo de sistemas y simulacros bajo el marco NERC-CIP. Ideal para plantas eléctricas y OT.",
+      title: "Accede a la Guía Técnica NERC-CIP en PDF",
+      description: "Contiene fases de implementación, roles, desafíos y mejores prácticas para plantas eléctricas, centros de control y operadores OT. Incluye anexos regulatorios y cronogramas recomendados.",
       successTitle: "¡Descarga exitosa!",
-      successMessage: "Gracias por descargar nuestro documento. Revisa tu carpeta de descargas.",
-      buttonText: "Descargar ahora",
-      fileDownload: "Plan_Recuperacion_NERC_CIP.pdf",
+      successMessage: "Gracias por descargar nuestra guía. Revisa tu carpeta de descargas o tu correo electrónico si fue enviado automáticamente.",
+      buttonText: "Descargar Guía",
+      fileDownload: "Guia_Implementacion_NERC_CIP.pdf",
     }
   ],
 }
@@ -88,7 +88,7 @@ const faqsSection = {
 ---
 
 <Layout title={title} description={description} image="../src/assets/images/servicios/servicio-1.webp" jsonLdString={jsonLdString}>
-    <InnerHero content={heroContent} />
+    <InnerHero content={heroContent} showBrochure={true} brochureText="Descarga la guía del Plan de Recuperación ante Desastres"/>
     {feature && <FeatureDetails feature={feature} />}
 
     <div

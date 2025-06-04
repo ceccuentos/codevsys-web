@@ -506,6 +506,10 @@ aside h1 {
     .cursor-pointer { cursor: pointer; }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
     margin: 0;
