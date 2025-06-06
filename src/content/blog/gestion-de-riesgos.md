@@ -10,13 +10,30 @@ seo:
   title: "Gestión de riesgos en ciberseguridad: protege tus activos digitales"
   description: "Aprende a gestionar riesgos en ciberseguridad en solo 3 pasos. Protege eficazmente tus activos digitales con esta guía práctica y sencilla."
 
-showSubscription: false
+showSubscription: true
+showBrochure: true
+brochureText: "¿Quieres la guía de implementación Plan de Recuperación ante Desastres PDF?"
+brochureButtonText: "Descargar Guía Ahora"
+subscriptionContent:
+  eyebrow: "Gestión de Riesgos"
+  headline: "Descarga la Guía para Plan de Recuperación ante Desastres PDF"
+  description: "Implementación por fases, control de ciberactivos, respuesta a incidentes y cumplimiento regulatorio para el sector eléctrico chileno."
+  # image: "../../assets/images/blog/consultoria-nerc-cip-codevsys.png"
+  imageAlt: "Portada Guía Plan de Recuperación ante Desastres"
+  newsLetterForm:
+    - title: "¡Descarga la Guía Técnica Plan de Recuperación ante Desastres PDF!"
+      description: "Incluye categorización de impacto, estructura de roles, fases de implementación, controles técnicos y mejores prácticas. Ideal para generadoras, transmisoras y centros de control OT."
+      successTitle: "¡Descarga exitosa!"
+      successMessage: "Gracias por descargar nuestra guía. Revisa tu carpeta de descargas o tu correo electrónico si fue enviado automáticamente."
+      buttonText: "Descargar ahora"
+      fileDownload: "Plan_Recuperacion_NERC_CIP.pdf"
+
 jsonLdString: >
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Gestión de riesgos en ciberseguridad: protege tus activos digitales, cumple NERC-CIP y la ley de ciberseguridad en 3 pasos",
-    "description": "Aprende cómo implementar una gestión de riesgos efectiva en ciberseguridad para proteger tus activos digitales, cumplir con el estándar NERC-CIP y la nueva ley de ciberseguridad en Chile. Descubre los tres pasos clave para fortalecer la resiliencia y el cumplimiento normativo de tu empresa frente a amenazas y ataques en el entorno digital actual",
+    "description": "Aprende cómo implementar una gestión de riesgos efectiva en ciberseguridad para proteger tus activos digitales, cumplir con el estándar NERC-CIP y la nueva ley de ciberseguridad en Chile. Descubre los tres pasos clave para fortalecer la resiliencia y el cumplimiento normativo de tu empresa frente a amenazas y ataques en el entorno digital actual.  Descarga la guía de implementación de gestión de riesgos en ciberseguridad en PDF.",
     "datePublished": "2025-03-19T00:00:00-04:00",
     "author": {
       "@type": "Organization",

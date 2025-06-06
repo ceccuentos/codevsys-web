@@ -7,14 +7,14 @@ publishDate: "2024-12-23"
 publish: true
 categories: ["Ciberseguridad", "NERC-CIP"]
 
+seo:
+  title: "Qué es Nerc-CIP"
+  description: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
+
 showBrochure: true
 brochureText: "¿Quieres la guía de implementación NERC-CIP PDF?"
 brochureButtonText: "Descargar Guía Ahora"
 # brochureLink: "#id-del-formulario-especifico" # Opcional: si quieres un ancla diferente a #subscription"
-
-seo:
-  title: "Qué es Nerc-CIP"
-  description: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
 
 showSubscription: true
 subscriptionContent:
@@ -37,7 +37,7 @@ jsonLdString: >
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "¿Qué es NERC-CIP? El estándar de ciberseguridad para el sector eléctrico chileno",
-    "description": "Conoce el estándar NERC-CIP y cómo su implementación fortalece la ciberseguridad, el cumplimiento normativo y las mejores prácticas en empresas del sector eléctrico en Chile. Descubre recomendaciones clave y recursos para asegurar la continuidad operacional y la protección de infraestructuras críticas.",
+    "description": "Conoce el estándar NERC-CIP y cómo su implementación fortalece la ciberseguridad, el cumplimiento normativo y las mejores prácticas en empresas del sector eléctrico en Chile. Descubre recomendaciones clave y recursos para asegurar la continuidad operacional y la protección de infraestructuras críticas. Descarga la guía de implementación de NERC-CIP en PDF.",
     "datePublished": "2024-12-23T00:00:00-04:00",
     "author": {
       "@type": "Organization",
