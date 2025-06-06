@@ -102,3 +102,143 @@ La integración se realiza desde el backend (API routes) mediante el SDK oficial
 - Si tienes dudas sobre la configuración, revisa los archivos de configuración en la raíz del proyecto.
 
 Si necesitas más detalles o ayuda para contribuir, contacta al equipo de Codevsys.
+
+---
+
+## Cómo agregar un nuevo post al blog: Frontmatter explicado
+
+Cada post del blog se define mediante un archivo Markdown en `src/content/blog/`. En la cabecera (frontmatter) de cada archivo, se deben incluir los siguientes campos:
+
+```yaml
+title: "Título del post"
+excerpt: "Resumen breve para listados y SEO"
+featuredImage: "./images/imagen_destacada.jpg"
+publishDate: "YYYY-MM-DD"
+publish: true # true para publicar, false para ocultar
+categories: ["Categoría1", "Categoría2"]
+
+seo:
+  title: "Título SEO"
+  description: "Descripción SEO"
+
+# Opcionales para Call-to-Action (CTA) de Brochure
+showBrochure: true # Muestra un bloque CTA de descarga
+brochureText: "Texto principal del CTA"
+brochureButtonText: "Texto del botón (opcional, por defecto 'Descargar')"
+brochureLink: "#ancla-o-link" # (opcional, por defecto '#subscription')
+
+# Opcionales para sección de Suscripción/Descarga
+showSubscription: true # Muestra formulario de suscripción/descarga
+subscriptionContent:
+  eyebrow: "Texto pequeño sobre el formulario"
+  headline: "Título destacado del formulario"
+  description: "Descripción del beneficio o recurso"
+  image: "ruta/imagen.png" # (opcional)
+  imageAlt: "Texto alternativo de la imagen"
+  newsLetterForm:
+    - title: "Título del recurso a descargar"
+      description: "Descripción del recurso"
+      successTitle: "Título de éxito tras descargar"
+      successMessage: "Mensaje de éxito tras descargar"
+      buttonText: "Texto del botón de descarga"
+      fileDownload: "archivo.pdf"
+
+# Opcional: Para SEO avanzado para SEO
+jsonLdString: >
+  {...}
+```
+
+> **Nota:** `jsonLdString` permite agregar datos estructurados en formato [JSON-LD](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) para mejorar la visibilidad SEO en buscadores como Google. Puedes personalizar los campos según el contenido de tu post.
+
+
+### Explicación de cada campo
+
+- **title**: Título principal del post (visible en la página y listados).
+- **excerpt**: Resumen breve para mostrar en listados y SEO.
+- **featuredImage**: Imagen destacada que se muestra en el listado y cabecera del post.
+- **publishDate**: Fecha de publicación (formato YYYY-MM-DD).
+- **publish**: Si es `true`, el post será visible en el blog.
+- **categories**: Lista de categorías o etiquetas para clasificar el post.
+- **seo.title** y **seo.description**: Título y descripción para motores de búsqueda.
+
+#### Campos para Call-to-Action (CTA) de Brochure
+- **showBrochure**: Si es `true`, muestra una sección CTA con botón destacado.
+- **brochureText**: Texto principal del CTA (mensaje de invitación o descarga).
+- **brochureButtonText**: Texto del botón (opcional, por defecto 'Descargar').
+- **brochureLink**: Link o ancla para el botón (opcional, por defecto '#subscription').
+
+#### Campos para sección de Suscripción/Descarga
+- **showSubscription**: Si es `true`, muestra una sección de suscripción o descarga de recurso.
+- **subscriptionContent**: Objeto con la información del formulario y recurso a descargar.
+  - **eyebrow**: Texto pequeño sobre el formulario (opcional).
+  - **headline**: Título destacado del formulario.
+  - **description**: Descripción del recurso o beneficio.
+  - **image**: Imagen opcional para mostrar junto al formulario.
+  - **imageAlt**: Texto alternativo de la imagen.
+  - **newsLetterForm**: Lista de recursos descargables, cada uno con:
+    - **title**: Título del recurso.
+    - **description**: Descripción del recurso.
+    - **successTitle**: Título mostrado tras descargar.
+    - **successMessage**: Mensaje mostrado tras descargar.
+    - **buttonText**: Texto del botón de descarga.
+    - **fileDownload**: Nombre del archivo a descargar.
+
+#### SEO avanzado
+- **jsonLdString**: Permite definir datos estructurados en formato JSON-LD para SEO avanzado (opcional).
+
+---
+
+**Ejemplo completo:**
+
+```yaml
+title: "¿Qué es NERC-CIP?"
+excerpt: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
+featuredImage: "./images/ciberseguridad_NERC-CIP.webp"
+publishDate: "2024-12-23"
+publish: true
+categories: ["Ciberseguridad", "NERC-CIP"]
+seo:
+  title: "Qué es Nerc-CIP"
+  description: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
+showBrochure: true
+brochureText: "¿Quieres la guía de implementación NERC-CIP PDF?"
+brochureButtonText: "Descargar Guía Ahora"
+# brochureLink: "#id-del-formulario-especifico" # Opcional
+showSubscription: true
+subscriptionContent:
+  eyebrow: "Seguridad Operacional"
+  headline: "Descarga la Guía de Implementación NERC-CIP PDF"
+  description: "Implementación por fases, control de ciberactivos, respuesta a incidentes y cumplimiento regulatorio para el sector eléctrico chileno."
+  imageAlt: "Portada Guía NERC-CIP"
+  newsLetterForm:
+    - title: "¡Descarga la Guía Técnica NERC-CIP PDF!"
+      description: "Incluye categorización de impacto, estructura de roles, fases de implementación, controles técnicos y mejores prácticas. Ideal para generadoras, transmisoras y centros de control OT."
+      successTitle: "¡Descarga exitosa!"
+      successMessage: "Gracias por descargar nuestra guía. Revisa tu carpeta de descargas o tu correo electrónico si fue enviado automáticamente."
+      buttonText: "Descargar ahora"
+      fileDownload: "Guia_Implementacion_NERC_CIP.pdf"
+jsonLdString: >
+jsonLdString: >
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "¿Qué es NERC-CIP? El estándar de ciberseguridad para el sector eléctrico chileno",
+    "description": "Conoce el estándar NERC-CIP y cómo su implementación fortalece la ciberseguridad, el cumplimiento normativo y las mejores prácticas en empresas del sector eléctrico en Chile. Descubre recomendaciones clave y recursos para asegurar la continuidad operacional y la protección de infraestructuras críticas. Descarga la guía de implementación de NERC-CIP en PDF.",
+    "datePublished": "2024-12-23T00:00:00-04:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Codevsys",
+      "url": "https://www.codevsys.cl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Codevsys",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.codevsys.cl/images/logo.png"
+      }
+    }
+  }
+
+```
+

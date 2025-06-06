@@ -14,6 +14,7 @@ showSubscription: true
 showBrochure: true
 brochureText: "¿Quieres la guía de implementación Plan de Recuperación ante Desastres PDF?"
 brochureButtonText: "Descargar Guía Ahora"
+
 subscriptionContent:
   eyebrow: "Gestión de Riesgos"
   headline: "Descarga la Guía para Plan de Recuperación ante Desastres PDF"
