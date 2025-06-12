@@ -38,26 +38,26 @@ export const faqLists: Record<string, FaqList> = {
         id: 'nerc_cip',
         faqs: [
             {
-                question: "¿Qué es el estándar NERC-CIP?",
-                answer: "Es un conjunto de normas de ciberseguridad que regulan la protección de sistemas críticos en el sector eléctrico de América del Norte y adaptado en Chile."
+              question: "¿Qué es el estándar NERC-CIP?",
+              answer: "Es un conjunto de normas obligatorias en América del Norte que regulan la ciberseguridad de los sistemas críticos en el sector eléctrico. En Chile, ha sido adoptado como base para regulaciones locales, especialmente por el Coordinador Eléctrico Nacional."
             },
             {
-                question: "¿Cuáles son los requisitos principales del NERC-CIP?",
-                answer: "Inventario de activos críticos, control de acceso lógico y físico, gestión de incidentes y continuidad operativa, entre otros."
+              question: "¿Cuáles son los requisitos principales del NERC-CIP?",
+              answer: "Inventario de activos críticos, control de acceso lógico y físico, gestión de incidentes y continuidad operativa, entre otros. Está compuesto por normas CIP-002 a CIP-013."
             },
             {
-                question: "¿Cómo afecta NERC-CIP a las empresas eléctricas chilenas?",
-                answer: "Las obliga a implementar medidas técnicas y administrativas para proteger los activos digitales que controlan la operación eléctrica nacional."
+              question: "¿Cómo afecta NERC-CIP a las empresas eléctricas chilenas?",
+              answer: "El Coordinador Eléctrico Nacional ha adoptado NERC-CIP como base para definir exigencias obligatorias en materia de ciberseguridad para ciertas empresas eléctricas que operan infraestructura crítica."
             },
             {
-                question: "¿Es obligatorio cumplir con NERC-CIP en Chile?",
-                answer: "No es obligatorio por ley, pero se recomienda como marco de referencia para cumplir con las exigencias de ciberseguridad en energía crítica."
+              question: "¿Es obligatorio cumplir con NERC-CIP en Chile?",
+              answer: "NERC-CIP no está consagrado en una ley nacional, pero su cumplimiento es obligatorio para ciertas empresas eléctricas chilenas, según lo establecido por el Coordinador Eléctrico Nacional en normativas sectoriales."
             },
             {
-                question: "¿Qué servicios ofrece Codevsys para NERC-CIP?",
-                answer: "Realizamos assessment normativo, plan de cumplimiento, capacitación y acompañamiento técnico para lograr alineación con el estándar."
+              question: "¿Qué servicios ofrece Codevsys para NERC-CIP?",
+              answer: "Realizamos assessment normativo, plan de cumplimiento, capacitación y acompañamiento técnico para lograr alineación con el estándar."
             }
-        ]
+          ]
     },
     ley_ciberseguridad: {
         id: 'ley_ciberseguridad',
@@ -135,7 +135,7 @@ export const faqLists: Record<string, FaqList> = {
           {
             question: "¿Cómo puedo contactar a Codevsys?",
             answer:
-              "Puedes escribirnos a través de nuestro formulario web, agendar una reunión en línea o contactarnos por correo a contacto@codevsys.cl."
+              "Puedes escribirnos a través de nuestro formulario web, agendar una reunión en línea o contactarnos por correo a info@codevsys.cl."
           }
         ]
     }

@@ -1,0 +1,40 @@
+# Notas de desarrollo y deploy
+
+## Comandos útiles para git y Vercel
+
+### Hacer commit y push
+
+**Convención para subir un post de blog:**
+
+Usa el prefijo:
+```
+docs(blog):
+```
+Ejemplo:
+```
+git add .
+git commit -m "docs(blog): agrega post sobre diferencia entre IA Agents e IA Assistants"
+git push origin master
+```
+
+### Forzar deploy en Vercel desde la terminal
+
+```
+vercel --prod --force
+```
+
+### Ver historial de comandos en la terminal
+
+```
+history
+```
+
+### Buscar comandos anteriores específicos
+
+```
+history | grep git
+```
+
+---
+
+Puedes agregar aquí cualquier otro apunte útil para el flujo de trabajo del proyecto.
