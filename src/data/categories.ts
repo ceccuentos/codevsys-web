@@ -50,6 +50,21 @@ export const categories: Category[] = [
     slug: 'ciberseguridad',
     description: 'Explorar temas y noticias de ciberseguridad'
   },
+  {
+    name: 'IA',
+    slug: 'ia',
+    description: 'Explorar temas y noticias de inteligencia artificial'
+  },
+  {
+    name: 'Automatización',
+    slug: 'automatizacion',
+    description: 'Explorar temas y noticias de automatización'
+  },
+  {
+    name: 'Transformación Digital',
+    slug: 'transformacion-digital',
+    description: 'Explorar temas y noticias de transformación digital'
+  },
 ];
 
 // Helper function to get category by slug
