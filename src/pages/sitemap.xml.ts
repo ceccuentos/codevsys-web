@@ -29,8 +29,10 @@ export async function GET() {
 
   const blogUrls = blogPosts.map((post) => {
     const slug = post.id.replace(/\.md$/, '');
-    const lastmod =
-      post.data.updated || post.data.publishDate || new Date().toISOString().split('T')[0];
+    // const lastmodx =
+    //   post.data.updated || post.data.publishDate || new Date().toISOString().split('T')[0];
+    const lastmod = new Date(post.data.updated || post.data.publishDate || Date.now()).toISOString();
+
 
     return `<url>
   <loc>${siteUrl}/blog/${slug}/</loc>
