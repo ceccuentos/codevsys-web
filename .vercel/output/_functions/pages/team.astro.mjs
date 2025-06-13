@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, u as unescapeHTML } from '../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../chunks/Layout_DU8dSlIb.mjs';
-import { $ as $$InnerHero } from '../chunks/InnerHero_D1rDMW7E.mjs';
+import { b as $$Layout } from '../chunks/Layout_BvKR9mbp.mjs';
+import { $ as $$InnerHero } from '../chunks/InnerHero_CQp3A22S.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
@@ -10,6 +10,7 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
   const heroContent = {
     title: "Nosotros",
     description: "Somos una Startup joven nacida a partir del convencimiento de que las personas pueden aportar al desarrollo de una sociedad a trav\xE9s de iniciativas tecnol\xF3gicas que apuntan alto y que ven en el crecimiento mutuo una oportunidad de aportar al mundo en que vivimos."
+    // backgroundImage: "/images/blog-hero.png"
   };
   const manifiesto = [{
     name: "Manifiesto",

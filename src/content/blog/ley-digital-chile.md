@@ -4,7 +4,8 @@ excerpt: "Chile moderniza su legislación digital con tres leyes clave que oblig
 featuredImage: "./images/paisaje-digital.jpg"
 publishDate: "2025-05-05"
 publish: true
-categories: ["Ciberseguridad"]
+categories: ["Ciberseguridad","Cumplimiento Normativo"]
+updated: "2025-06-13"
 
 seo:
   title: "Impacto de las Nuevas Leyes de Ciberseguridad y Datos Personales en Empresas Chilenas"
@@ -17,6 +18,23 @@ jsonLdString: >
     "headline": "Impacto de las leyes 21.459, 21.663 y 21.719 en la ciberseguridad y protección de datos personales en Chile",
     "description": "Descubre cómo las leyes 21.459 (delitos informáticos), 21.663 (ley marco de ciberseguridad) y 21.719 (protección de datos personales) están transformando el cumplimiento normativo y la gestión de riesgos en las empresas chilenas. Aprende a prepararte para los nuevos desafíos legales y técnicos en ciberseguridad y privacidad.",
     "datePublished": "2025-05-05T00:00:00-04:00",
+    "keywords": [
+      "ley transformación digital Chile",
+      "Ley 21.180",
+      "transformación digital Estado",
+      "digitalización trámites públicos",
+      "interoperabilidad plataformas públicas",
+      "notificaciones electrónicas",
+      "expedientes electrónicos",
+      "gobierno digital Chile",
+      "ley 21.459 delitos informáticos",
+      "digitalización documentos públicos",
+      "notificaciones electrónicas Estado",
+      "detalles Ley transformación digital Estado",
+      "qué establece la Ley 21.719",
+      "qué establece la Ley 21.663",
+      "qué establece la Ley 21.459"
+    ],
     "author": {
       "@type": "Person",
       "name": "Cristian E. Contreras Cabrera",

@@ -5,7 +5,8 @@ excerpt: "El Estándar de Ciberseguridad para el Sector Eléctrico Chileno"
 featuredImage: "./images/ciberseguridad_NERC-CIP.webp"
 publishDate: "2024-12-23"
 publish: true
-categories: ["Ciberseguridad", "NERC-CIP"]
+categories: ["Ciberseguridad", "NERC-CIP", "Cumplimiento Normativo"]
+updated: "2025-06-13"
 
 seo:
   title: "Qué es Nerc-CIP"
@@ -44,6 +45,19 @@ jsonLdString: >
       "name": "Codevsys",
       "url": "https://www.codevsys.cl"
     },
+    "keywords": [
+      "NERC CIP",
+      "NERC Critical Infrastructure Protection",
+      "estándares NERC CIP",
+      "cumplimiento NERC CIP",
+      "ciberseguridad infraestructura eléctrica",
+      "control de accesos NERC CIP",
+      "perímetros electrónicos",
+      "respuesta a incidentes NERC",
+      "gestión de riesgos BES",
+      "NERC CIP requisitos",
+      "infraestructura crítica eléctrica"
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "Codevsys",

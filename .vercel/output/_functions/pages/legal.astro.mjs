@@ -1,8 +1,8 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { a as $$Layout } from '../chunks/Layout_DU8dSlIb.mjs';
-import { g as getCollection } from '../chunks/_astro_content_CHbVwHgK.mjs';
-import { $ as $$InnerHero } from '../chunks/InnerHero_D1rDMW7E.mjs';
+import { b as $$Layout } from '../chunks/Layout_BvKR9mbp.mjs';
+import { g as getCollection } from '../chunks/_astro_content_IQZdsUy-.mjs';
+import { $ as $$InnerHero } from '../chunks/InnerHero_CQp3A22S.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {

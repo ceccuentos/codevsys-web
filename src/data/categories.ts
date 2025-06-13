@@ -65,6 +65,16 @@ export const categories: Category[] = [
     slug: 'transformacion-digital',
     description: 'Explorar temas y noticias de transformación digital'
   },
+  {
+    name: 'Ley 21.663',
+    slug: 'ley-21663',
+    description: 'Explorar temas y noticias de la Ley 21.663'
+  },
+  {
+    name: 'Cumplimiento Normativo',
+    slug: 'cumplimiento-normativo',
+    description: 'Explorar temas y noticias de cumplimiento normativo'
+  }
 ];
 
 // Helper function to get category by slug

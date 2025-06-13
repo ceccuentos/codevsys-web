@@ -1,16 +1,16 @@
 import { a as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, b as renderTemplate, r as renderComponent, s as spreadAttributes, u as unescapeHTML } from '../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
-import { b as $$Button, a as $$Layout } from '../chunks/Layout_DU8dSlIb.mjs';
+import { a as $$Button, b as $$Layout } from '../chunks/Layout_BvKR9mbp.mjs';
 import { $ as $$Eyebrow } from '../chunks/Eyebrow_Cq1axgeD.mjs';
 import { e as getPaddingClass, d as getBackgroundColor, f as getTextColor } from '../chunks/styleUtils_k5WRa34L.mjs';
 /* empty css                                 */
-import { f as featureLists } from '../chunks/features_BFtgbtni.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_CUDU_6_o.mjs';
+import { f as featureLists } from '../chunks/features_Uvp-_yLD.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_BhyCBfHW.mjs';
 import 'clsx';
-import { $ as $$Subscription } from '../chunks/Subscription_Dan0Rt_e.mjs';
-import { g as getCollection } from '../chunks/_astro_content_CHbVwHgK.mjs';
-import { $ as $$BlogPost } from '../chunks/BlogPost_1in78oa7.mjs';
-import { f as faqLists, $ as $$Faqs } from '../chunks/Faqs_DQ0FFtPo.mjs';
+import { $ as $$Subscription } from '../chunks/Subscription_C4-7Aty7.mjs';
+import { g as getCollection } from '../chunks/_astro_content_IQZdsUy-.mjs';
+import { $ as $$BlogPost } from '../chunks/BlogPost_BzdnHy9w.mjs';
+import { f as faqLists, $ as $$Faqs } from '../chunks/Faqs_Cypke2lL.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$3 = createAstro("http://localhost:4321");
@@ -19,7 +19,7 @@ const $$Hero = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$Hero;
   const { content } = Astro2.props;
   const opacity = content.overlayOpacity ?? 1;
-  return renderTemplate`${maybeRenderHead()}<section class="header-offset relative"> ${content.backgroundImage && renderTemplate`<div class="absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"> <img src="/images/home/default-hero-codevsys-1200w.webp" srcset="/images/home/default-hero-codevsys-600w.webp 600w, /images/home/default-hero-codevsys-1200w.webp 1200w, /images/home/default-hero-codevsys-1920w.webp 1920w" sizes="100vw" alt="" width="1920" height="1080" class="w-full h-full object-cover" loading="eager" decoding="async"> <div class="hero-background absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"${addAttribute(`opacity: ${opacity};`, "style")}></div> </div>`} <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center"> <h1 class="text-white text-balance text-4xl md:text-5xl font-bold" data-aos="fade-up">${content.title}</h1> <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">${content.description}</p> ${content.buttons && content.buttons.length > 0 && renderTemplate`<div class="flex flex-wrap gap-4 mt-8" data-aos="fade-up"> ${content.buttons.map((button) => renderTemplate`${renderComponent($$result, "Button", $$Button, { "href": button.link, "target": button.target || "_self", "variant": button.variant || "primary" }, { "default": ($$result2) => renderTemplate`${button.text}` })}`)} </div>`} </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="header-offset relative"> ${content.backgroundImage && renderTemplate`<div class="absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"> ${renderTemplate`<img src="/images/home/default-hero-codevsys-1200w.webp" srcset="/images/home/default-hero-codevsys-600w.webp 600w, /images/home/default-hero-codevsys-1200w.webp 1200w, /images/home/default-hero-codevsys-1920w.webp 1920w" sizes="(max-width: 600px) 375px, 100vw" alt="Ciberseguridad eléctrica" width="1920" height="1080" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="auto">`} <div class="hero-background absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"${addAttribute(`opacity: ${opacity};`, "style")}></div> </div>`} <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center"> <h1 class="text-white text-balance text-4xl md:text-5xl font-bold" data-aos="fade-up">${content.title}</h1> <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">${content.description}</p> ${content.buttons && content.buttons.length > 0 && renderTemplate`<div class="flex flex-wrap gap-4 mt-8" data-aos="fade-up"> ${content.buttons.map((button) => renderTemplate`${renderComponent($$result, "Button", $$Button, { "href": button.link, "target": button.target || "_self", "variant": button.variant || "primary" }, { "default": ($$result2) => renderTemplate`${button.text}` })}`)} </div>`} </div> </section>`;
 }, "/Users/cristiancontrerascabrera/astro/codevsys-web/src/components/sections/Hero.astro", void 0);
 
 const $$Astro$2 = createAstro("http://localhost:4321");

@@ -6,6 +6,7 @@ publishDate: "2025-06-12"
 publish: true
 categories: ["IA", "Automatización", "Transformación Digital"]
 
+
 seo:
   title: "AI assistants vs AI agents: el futuro de la autonomía empresarial"
   description: "Explora cómo los AI agents superan a los asistentes tradicionales, permitiendo a las empresas anticiparse, automatizar procesos complejos y escalar su productividad con inteligencia artificial avanzada."
@@ -22,6 +23,18 @@ jsonLdString: >
       "name": "Codevsys",
       "url": "https://www.codevsys.com"
     },
+    "keywords": [
+      "IA agentes vs asistentes",
+      "diferencias IA agentes asistentes",
+      "AI agents vs AI assistants",
+      "IA proactiva vs reactiva",
+      "autonomía IA agentes",
+      "casos uso agentes de IA",
+      "asistentes virtuales IA",
+      "asistentes conversacionales",
+      "agentes inteligentes",
+      "machine learning asistencia IA"
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "Codevsys",

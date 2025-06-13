@@ -4,7 +4,8 @@ excerpt: "Descubre cómo la gestión de riesgos puede ayudarte a proteger tus ac
 featuredImage: "./images/gestion-de-riesgos.jpeg"
 publishDate: "2025-03-19"
 publish: true
-categories: ["Ciberseguridad", "NERC-CIP"]
+updated: "2025-06-13"
+categories: ["Ciberseguridad", "NERC-CIP", "Cumplimiento Normativo"]
 
 seo:
   title: "Gestión de riesgos en ciberseguridad: protege tus activos digitales"
@@ -41,6 +42,18 @@ jsonLdString: >
       "name": "Codevsys",
       "url": "https://www.codevsys.com"
     },
+    "keywords": [
+        "gestión de riesgos ciberseguridad",
+        "riesgos cibernéticos activos digitales",
+        "perfil de riesgo ciberseguridad",
+        "disposición al riesgo",
+        "tolerancia al riesgo",
+        "evaluación de activos digitales",
+        "framework NIST RMF",
+        "marcos internacionales ISO 27001",
+        "mitigación de riesgos ciber",
+        "proveedores externos ciberseguridad"
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "Codevsys",
