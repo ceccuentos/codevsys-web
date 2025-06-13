@@ -1,12 +1,12 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  const siteUrl = 'https://www.codevsys.cl'; // ✅ Usa tu dominio real
+  const siteUrl = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
 
   // Obtiene los posts desde la colección "blog"
   const blogPosts = await getCollection('blog');
 
-  // Puedes incluir aquí tus rutas estáticas también
+  // Incluir aquí tus rutas estáticas también
   const staticRoutes = [
     '/',
     '/blog/',
@@ -29,10 +29,7 @@ export async function GET() {
 
   const blogUrls = blogPosts.map((post) => {
     const slug = post.id.replace(/\.md$/, '');
-    // const lastmodx =
-    //   post.data.updated || post.data.publishDate || new Date().toISOString().split('T')[0];
     const lastmod = new Date(post.data.updated || post.data.publishDate || Date.now()).toISOString();
-
 
     return `<url>
   <loc>${siteUrl}/blog/${slug}/</loc>

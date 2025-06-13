@@ -52,7 +52,8 @@ jsonLdString: >
         "framework NIST RMF",
         "marcos internacionales ISO 27001",
         "mitigación de riesgos ciber",
-        "proveedores externos ciberseguridad"
+        "proveedores externos ciberseguridad",
+        "NERC-CIP"
     ],
     "publisher": {
       "@type": "Organization",

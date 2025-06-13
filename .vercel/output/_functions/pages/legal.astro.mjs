@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_Cp1educF.mjs';
 import 'kleur/colors';
 import { b as $$Layout } from '../chunks/Layout_BvKR9mbp.mjs';
-import { g as getCollection } from '../chunks/_astro_content_IQZdsUy-.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CDog-Stk.mjs';
 import { $ as $$InnerHero } from '../chunks/InnerHero_CQp3A22S.mjs';
 export { renderers } from '../renderers.mjs';
 

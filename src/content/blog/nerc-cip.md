@@ -153,5 +153,6 @@ La implementación de estas normas es un proceso dinámico que requiere un enfoq
 ### Reflexión Final
 El desafío no solo radica en implementar estándares técnicos, sino en crear una cultura de seguridad que involucre a todas las partes interesadas. La sostenibilidad y la continuidad de nuestras operaciones energéticas dependen de ello.
 
-**¿Qué medidas adicionales consideras esenciales para fortalecer la seguridad de nuestras infraestructuras críticas?**
+---
 
+**¿Tu organización está preparada?** En [Codevsys](https://www.codevsys.cl) ayudamos a empresas de todos los tamaños a entender y aplicar estas leyes, diseñar sus políticas, entrenar a sus equipos y fortalecer su seguridad digital. [Contáctanos](https://www.codevsys.cl/contact) para una evaluación inicial sin costo.

@@ -83,6 +83,6 @@ El cumplimiento ya no es solo un tema de abogados; es una función compartida en
 
 ---
 
-**¿Tu organización está preparada?** En [Codevsys](https://www.codevsys.cl) ayudamos a empresas de todos los tamaños a entender y aplicar estas leyes, diseñar sus políticas, entrenar a sus equipos y fortalecer su seguridad digital. [Contáctanos](https://www.codevsys.cl/contacto) para una evaluación inicial sin costo.
+**¿Tu organización está preparada?** En [Codevsys](https://www.codevsys.cl) ayudamos a empresas de todos los tamaños a entender y aplicar estas leyes, diseñar sus políticas, entrenar a sus equipos y fortalecer su seguridad digital. [Contáctanos](https://www.codevsys.cl/contact) para una evaluación inicial sin costo.
 
 

@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
 import { c as createExports } from './chunks/entrypoint_91HkbRQ2.mjs';
-import { manifest } from './manifest_Ckd-O8YM.mjs';
+import { manifest } from './manifest_97-39R25.mjs';
 
 const serverIslandMap = new Map();;
 
@@ -16,14 +16,15 @@ const _page8 = () => import('./pages/category/_---slug_.astro.mjs');
 const _page9 = () => import('./pages/contact.astro.mjs');
 const _page10 = () => import('./pages/legal/_slug_.astro.mjs');
 const _page11 = () => import('./pages/legal.astro.mjs');
-const _page12 = () => import('./pages/servicios/consultoria-nerc-cip.astro.mjs');
-const _page13 = () => import('./pages/servicios/ia-generativa.astro.mjs');
-const _page14 = () => import('./pages/servicios/integraciones-software.astro.mjs');
-const _page15 = () => import('./pages/servicios/ley-ciberseguridad-chilena.astro.mjs');
-const _page16 = () => import('./pages/sitemap.xml.astro.mjs');
-const _page17 = () => import('./pages/team.astro.mjs');
-const _page18 = () => import('./pages/team/_---slug_.astro.mjs');
-const _page19 = () => import('./pages/index.astro.mjs');
+const _page12 = () => import('./pages/rss.xml.astro.mjs');
+const _page13 = () => import('./pages/servicios/consultoria-nerc-cip.astro.mjs');
+const _page14 = () => import('./pages/servicios/ia-generativa.astro.mjs');
+const _page15 = () => import('./pages/servicios/integraciones-software.astro.mjs');
+const _page16 = () => import('./pages/servicios/ley-ciberseguridad-chilena.astro.mjs');
+const _page17 = () => import('./pages/sitemap.xml.astro.mjs');
+const _page18 = () => import('./pages/team.astro.mjs');
+const _page19 = () => import('./pages/team/_---slug_.astro.mjs');
+const _page20 = () => import('./pages/index.astro.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/404.astro", _page1],
@@ -37,14 +38,15 @@ const pageMap = new Map([
     ["src/pages/contact/index.astro", _page9],
     ["src/pages/legal/[slug].astro", _page10],
     ["src/pages/legal/index.astro", _page11],
-    ["src/pages/servicios/consultoria-nerc-cip.astro", _page12],
-    ["src/pages/servicios/ia-generativa.astro", _page13],
-    ["src/pages/servicios/integraciones-software.astro", _page14],
-    ["src/pages/servicios/ley-ciberseguridad-chilena.astro", _page15],
-    ["src/pages/sitemap.xml.ts", _page16],
-    ["src/pages/team/index.astro", _page17],
-    ["src/pages/team/[...slug].astro", _page18],
-    ["src/pages/index.astro", _page19]
+    ["src/pages/rss.xml.ts", _page12],
+    ["src/pages/servicios/consultoria-nerc-cip.astro", _page13],
+    ["src/pages/servicios/ia-generativa.astro", _page14],
+    ["src/pages/servicios/integraciones-software.astro", _page15],
+    ["src/pages/servicios/ley-ciberseguridad-chilena.astro", _page16],
+    ["src/pages/sitemap.xml.ts", _page17],
+    ["src/pages/team/index.astro", _page18],
+    ["src/pages/team/[...slug].astro", _page19],
+    ["src/pages/index.astro", _page20]
 ]);
 
 const _manifest = Object.assign(manifest, {
@@ -55,7 +57,7 @@ const _manifest = Object.assign(manifest, {
     middleware: () => import('./_noop-middleware.mjs')
 });
 const _args = {
-    "middlewareSecret": "ef59fda8-ac74-474f-9c31-456df8891f40",
+    "middlewareSecret": "4265ed8d-7778-48b0-aa3a-409040ad6689",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);

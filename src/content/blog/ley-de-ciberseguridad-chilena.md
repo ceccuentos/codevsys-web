@@ -83,8 +83,6 @@ Para estar alineado con la Ley de Ciberseguridad, tanto los Prestadores de Servi
 - **Gestión y reporte de incidentes:** Es fundamental contar con un plan de respuesta a incidentes, con procedimientos claros para detectar, contener, mitigar y reportar ciberataques al CSIRT Nacional en los plazos exigidos por la ANCI.
 - **Monitoreo y auditoría:** Implementa monitoreo continuo de tus sistemas, realiza auditorías periódicas y mantén registros de actividades informáticas.
 - **Designación de responsables:** Debes nombrar un encargado de ciberseguridad (CSO o CISO) que reporte a la alta dirección y tenga autonomía para tomar decisiones clave.
-- **Adopción de protocolos y estándares de la ANCI:** Cumple con las directrices y taxonomías oficiales publicadas por la [Agencia Nacional de Ciberseguridad](https://anci.gob.cl).
-- **Registro e inscripción:** Los PSE deben inscribirse en la [plataforma de la ANCI](https://portal.anci.gob.cl/) y registrar a sus responsables, para facilitar la gestión y el reporte de incidentes.
 
 Cumplir con estos requisitos no solo evita sanciones, sino que fortalece la resiliencia de tu organización y la confianza de tus clientes.
 
