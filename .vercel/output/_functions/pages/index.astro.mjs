@@ -8,7 +8,7 @@ import { f as featureLists } from '../chunks/features_Uvp-_yLD.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_BhyCBfHW.mjs';
 import 'clsx';
 import { $ as $$Subscription } from '../chunks/Subscription_C4-7Aty7.mjs';
-import { g as getCollection } from '../chunks/_astro_content_CDog-Stk.mjs';
+import { g as getCollection } from '../chunks/_astro_content_7qRJ6TIs.mjs';
 import { $ as $$BlogPost } from '../chunks/BlogPost_BzdnHy9w.mjs';
 import { f as faqLists, $ as $$Faqs } from '../chunks/Faqs_Cypke2lL.mjs';
 export { renderers } from '../renderers.mjs';
